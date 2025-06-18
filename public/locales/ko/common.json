@@ -1,0 +1,106 @@
+{
+  "navigation": {
+    "home": "홈",
+    "about": "소개",
+    "blog": "블로그",
+    "contact": "연락처",
+    "categories": "카테고리"
+  },
+  "common": {
+    "readMore": "더 읽기",
+    "backToHome": "홈으로 돌아가기",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "notFound": "찾을 수 없음",
+    "search": "검색",
+    "searchPlaceholder": "게시글 검색...",
+    "language": "언어",
+    "date": "날짜",
+    "category": "카테고리",
+    "tags": "태그",
+    "share": "공유",
+    "previous": "이전",
+    "next": "다음"
+  },
+  "blog": {
+    "title": "여행 블로그",
+    "subtitle": "전 세계의 놀라운 여행지를 발견하세요",
+    "latestPosts": "최신 게시글",
+    "allPosts": "모든 게시글",
+    "noPostsFound": "게시글을 찾을 수 없습니다",
+    "noPostsAvailable": "이용 가능한 게시글이 없습니다",
+    "noPostsInCategory": "{{category}}에 게시글이 없습니다",
+    "relatedPosts": "관련 게시글",
+    "publishedOn": "게시일",
+    "readTime": "{{time}}분 읽기",
+    "readMore": "더 읽기",
+    "author": "작성자",
+    "showingPosts": "{{count}}개의 게시글",
+    "inCategory": "{{category}}에서",
+    "paginationInfo": "페이지 {{currentPage}} / {{totalPages}} • {{startIndex}}-{{endIndex}} / {{total}}개의 게시글을 표시"
+  },
+  "categories": {
+    "allCategories": "모든 카테고리",
+    "postsInCategory": "{{category}} 카테고리의 게시글",
+    "noPostsInCategory": "이 카테고리에 게시글이 없습니다"
+  },
+  "contact": {
+    "title": "연락처 - 여행 블로그",
+    "description": "여행 팁, 협업 제안, 또는 여행 이야기를 공유하고 싶으시면 언제든 연락주세요.",
+    "keywords": "연락처, 여행 블로거, 여행 팁, 협업, 여행 이야기",
+    "heading": "연락하기",
+    "subtitle": "동료 여행자들과 만나 경험을 나누고 싶어요!",
+    "info": {
+      "title": "연락처 정보"
+    },
+    "name": "이름",
+    "bloggerName": "알렉스 첸",
+    "email": "이메일",
+    "emailAddress": "hello@travelblog.com",
+    "location": "위치",
+    "locationText": "서울, 대한민국",
+    "social": "소셜 미디어",
+    "twitter": "travelblogger",
+    "twitterUrl": "https://twitter.com/travelblogger",
+    "instagram": "alextravel",
+    "instagramUrl": "https://instagram.com/alextravel",
+    "github": "alexchen",
+    "githubUrl": "https://github.com/alexchen",
+    "linkedin": "alexchen-travel",
+    "linkedinUrl": "https://linkedin.com/in/alexchen-travel",
+    "about": "소개",
+    "aboutText": "안녕하세요! 저는 서울에 거주하는 열정적인 여행자이자 블로거 알렉스입니다. 8년 넘게 세계를 탐험하며 아시아, 유럽, 아메리카 대륙의 30개국 이상을 방문했습니다.\n\n동료 모험가들과 여행 경험, 팁, 그리고 이야기를 나누기 위해 이 블로그를 시작했습니다. 첫 번째 혼자 여행을 계획하고 계시든, 숨겨진 보석 같은 장소를 찾는 숙련된 여행자이든, 제 콘텐츠가 여러분의 여행에 영감을 주고 도움이 되기를 바랍니다.\n\n여행하지 않을 때는 서울의 로컬 카페를 탐험하거나, 새로운 언어를 배우거나, 다음 모험을 계획하고 있습니다.",
+    "languages": "구사 언어",
+    "language": {
+      "en": "영어",
+      "ko": "한국어",
+      "zh": "중국어",
+      "ja": "일본어"
+    },
+    "interests": "여행 관심사",
+    "interestsList": "혼자 여행, 음식 관광, 문화 체험, 사진 촬영, 저예산 여행, 어드벤처 스포츠, 현지 시장, 역사적 장소",
+    "cta": {
+      "title": "함께 소통해요!",
+      "description": "여행 질문, 협업 아이디어, 또는 여러분만의 여행 이야기를 공유하고 싶으시다면 언제든 연락주세요.",
+      "button": "이메일 보내기"
+    }
+  },
+  "footer": {
+    "quickLinks": "빠른 링크",
+    "language": "언어",
+    "contact": "문의하기:",
+    "allRightsReserved": "모든 권리 보유.",
+    "privacy": "개인정보처리방침",
+    "terms": "이용약관",
+    "copyright": "© {{year}} 여행 블로그. 모든 권리 보유.",
+    "followUs": "팔로우",
+    "newsletter": "뉴스레터",
+    "subscribe": "구독",
+    "emailPlaceholder": "이메일을 입력하세요"
+  },
+  "meta": {
+    "defaultTitle": "여행 블로그 - 놀라운 여행지를 발견하세요",
+    "defaultDescription": "여행 이야기, 팁, 가이드를 통해 세상을 탐험하세요. 놀라운 여행지, 현지 문화, 잊을 수 없는 경험을 발견하세요.",
+    "keywords": "여행 블로그, 여행지, 여행 팁, 여행 가이드, 세계 여행, 모험, 관광, 여행 이야기, 휴가, 배낭여행"
+  }
+} 
