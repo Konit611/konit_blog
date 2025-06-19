@@ -15,24 +15,24 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   // Load translations for metadata
   const translations = {
     en: {
-      title: "Travel Blog - Discover Amazing Destinations",
-      description: "Explore the world through our travel stories, tips, and guides. Discover amazing destinations, local cultures, and unforgettable experiences.",
-      keywords: "travel blog, travel destinations, travel tips, travel guides, world travel, adventure, tourism, travel stories, vacation, backpacking"
+      title: "Tech Blog - Development Insights & Daily Learning",
+      description: "Explore programming insights, coding tutorials, and technical deep-dives. Share knowledge about software development, web technologies, and daily learnings (TIL).",
+      keywords: "tech blog, programming, software development, coding tutorials, TIL, web development, technical insights, developer blog, programming tips"
     },
     ko: {
-      title: "여행 블로그 - 놀라운 여행지를 발견하세요",
-      description: "우리의 여행 이야기, 팁, 가이드를 통해 세계를 탐험하세요. 놀라운 여행지, 현지 문화, 잊을 수 없는 경험을 발견하세요.",
-      keywords: "여행 블로그, 여행지, 여행 팁, 여행 가이드, 세계 여행, 모험, 관광, 여행 이야기, 휴가, 배낭여행"
+      title: "기술 블로그 - 개발 인사이트와 일일 학습",
+      description: "프로그래밍 인사이트, 코딩 튜토리얼, 기술 심화 내용을 탐험하세요. 소프트웨어 개발, 웹 기술, 일일 학습(TIL)에 대한 지식을 공유합니다.",
+      keywords: "기술 블로그, 프로그래밍, 소프트웨어 개발, 코딩 튜토리얼, TIL, 웹 개발, 기술 인사이트, 개발자 블로그, 프로그래밍 팁"
     },
     zh: {
-      title: "旅行博客 - 发现令人惊叹的目的地",
-      description: "通过我们的旅行故事、技巧和指南探索世界。发现令人惊叹的目的地、当地文化和难忘的体验。",
-      keywords: "旅行博客, 旅行目的地, 旅行技巧, 旅行指南, 世界旅行, 冒险, 旅游, 旅行故事, 度假, 背包旅行"
+      title: "技术博客 - 开发见解与日常学习",
+      description: "探索编程见解、编程教程和技术深度解析。分享软件开发、网络技术和日常学习(TIL)的知识。",
+      keywords: "技术博客, 编程, 软件开发, 编程教程, 今日所学, 网页开发, 技术见解, 开发者博客, 编程技巧"
     },
     ja: {
-      title: "旅行ブログ - 素晴らしい目的地を発見",
-      description: "私たちの旅行記、ヒント、ガイドを通して世界を探検しましょう。素晴らしい目的地、地元の文化、忘れられない体験を発見してください。",
-      keywords: "旅行ブログ, 旅行先, 旅行のコツ, 旅行ガイド, 世界旅行, 冒険, 観光, 旅行記, 休暇, バックパッキング"
+      title: "技術ブログ - 開発インサイトと日々の学習",
+      description: "プログラミングの洞察、コーディングチュートリアル、技術的な深掘りを探索してください。ソフトウェア開発、ウェブ技術、日々の学習(TIL)に関する知識を共有します。",
+      keywords: "技術ブログ, プログラミング, ソフトウェア開発, コーディングチュートリアル, TIL, ウェブ開発, 技術的洞察, 開発者ブログ, プログラミングのヒント"
     }
   };
 
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     keywords: t.keywords,
     authors: [{ name: 'Alex Chen' }],
     creator: 'Alex Chen',
-    publisher: 'Travel Blog',
+    publisher: 'Tech Blog',
     robots: {
       index: true,
       follow: true,
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       title: t.title,
       description: t.description,
       url: `/${locale}`,
-      siteName: 'Travel Blog',
+      siteName: 'Tech Blog',
       locale: locale,
       type: 'website',
       images: [
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     },
     twitter: {
       card: 'summary_large_image',
-      creator: '@travelblogger',
+      creator: '@developer',
       title: t.title,
       description: t.description,
       images: ['/images/og-home.jpg'],
@@ -118,12 +118,12 @@ export default async function HomePage({ params }: HomePageProps) {
     const featuredPosts = posts.slice(0, 3);
 
     // Generate JSON-LD structured data for WebSite
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://travelblog.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'Travel Blog',
-      description: 'Explore the world through our travel stories, tips, and guides. Discover amazing destinations, local cultures, and unforgettable experiences.',
+      name: 'Tech Blog',
+      description: 'Explore programming insights, coding tutorials, and technical deep-dives. Share knowledge about software development, web technologies, and daily learnings.',
       url: `${siteUrl}/${locale}`,
       inLanguage: locale,
       author: {
@@ -133,7 +133,7 @@ export default async function HomePage({ params }: HomePageProps) {
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Travel Blog',
+        name: 'Tech Blog',
         logo: {
           '@type': 'ImageObject',
           url: `${siteUrl}/images/logo.png`
@@ -149,8 +149,8 @@ export default async function HomePage({ params }: HomePageProps) {
       },
       mainEntity: {
         '@type': 'Blog',
-        name: 'Travel Blog',
-        description: 'Latest travel stories and destination guides',
+        name: 'Tech Blog',
+        description: 'Latest development insights and technical tutorials',
         url: `${siteUrl}/${locale}/blog`,
         blogPost: featuredPosts.slice(0, 3).map(post => ({
           '@type': 'BlogPosting',

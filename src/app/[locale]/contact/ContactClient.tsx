@@ -25,7 +25,7 @@ export default function ContactClient({ locale }: ContactClientProps) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: t('contact.bloggerName'),
-    jobTitle: 'Travel Blogger',
+    jobTitle: 'Software Developer',
     description: t('contact.aboutText'),
     url: `${siteUrl}/${locale}/contact`,
     email: t('contact.emailAddress'),
@@ -38,7 +38,7 @@ export default function ContactClient({ locale }: ContactClientProps) {
       t('contact.twitterUrl'),
       t('contact.instagramUrl'),
       t('contact.githubUrl'),
-      t('contact.linkedinUrl')
+      t('contact.linkedinUrl'),
     ].filter(url => url && !url.startsWith('contact.')), // Filter out missing translations
     knowsLanguage: [
       { '@type': 'Language', name: 'English' },

@@ -2,11 +2,97 @@ import React from 'react';
 import { getAllPortfolioMetadata } from '@/lib/portfolio';
 import { PortfolioMetadata } from '@/types';
 import { Layout } from '@/components/Layout';
+import { Metadata } from 'next';
 
 interface PortfolioPageProps {
   params: Promise<{
     locale: string;
   }>;
+}
+
+export async function generateMetadata({ params }: PortfolioPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  
+  // Load translations for metadata
+  const translations = {
+    en: {
+      title: "Portfolio - Creative Projects & Work",
+      description: "Explore my portfolio of creative projects, technical implementations, and professional work. Discover the technologies and methodologies I use to bring ideas to life.",
+      keywords: "portfolio, projects, web development, creative work, software development, technical projects"
+    },
+    ko: {
+      title: "포트폴리오 - 창작 프로젝트 및 작업",
+      description: "창작 프로젝트, 기술적 구현, 전문적인 작업들로 구성된 포트폴리오를 탐험해보세요. 아이디어를 현실로 만들기 위해 사용하는 기술과 방법론을 확인하세요.",
+      keywords: "포트폴리오, 프로젝트, 웹 개발, 창작 작업, 소프트웨어 개발, 기술 프로젝트"
+    },
+    zh: {
+      title: "作品集 - 创意项目与作品",
+      description: "探索我的创意项目、技术实现和专业作品组合。了解我用来将想法变为现实的技术和方法论。",
+      keywords: "作品集, 项目, 网页开发, 创意作品, 软件开发, 技术项目"
+    },
+    ja: {
+      title: "ポートフォリオ - クリエイティブプロジェクトと作品",
+      description: "クリエイティブプロジェクト、技術的実装、専門的な作品からなるポートフォリオをご覧ください。アイデアを現実にするために使用する技術と方法論を確認してください。",
+      keywords: "ポートフォリオ, プロジェクト, ウェブ開発, クリエイティブ作品, ソフトウェア開発, 技術プロジェクト"
+    }
+  };
+
+  const t = translations[locale as keyof typeof translations] || translations.en;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yoursite.com';
+  const canonicalUrl = `${siteUrl}/${locale}/portfolio`;
+
+  return {
+    title: t.title,
+    description: t.description,
+    keywords: t.keywords,
+    authors: [{ name: 'Developer' }],
+    creator: 'Developer',
+    publisher: 'Personal Portfolio',
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': `${siteUrl}/en/portfolio`,
+        'ko': `${siteUrl}/ko/portfolio`,
+        'zh': `${siteUrl}/zh/portfolio`,
+        'ja': `${siteUrl}/ja/portfolio`,
+      },
+    },
+    openGraph: {
+      title: t.title,
+      description: t.description,
+      url: canonicalUrl,
+      siteName: 'Personal Portfolio',
+      locale: locale,
+      type: 'website',
+      images: [
+        {
+          url: `${siteUrl}/images/og-portfolio.jpg`,
+          width: 1200,
+          height: 630,
+          alt: t.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.title,
+      description: t.description,
+      creator: '@developer',
+      images: [`${siteUrl}/images/og-portfolio.jpg`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
 }
 
 const translations = {

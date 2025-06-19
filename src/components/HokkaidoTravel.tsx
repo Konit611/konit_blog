@@ -12,26 +12,26 @@ export const HokkaidoTravel: React.FC<HokkaidoTravelProps> = ({ locale }) => {
   const translations = {
     en: {
       hero: {
-        title: "Travel of\nMy Own Views",
-        button: "Explore Now"
+        title: "Code & Learn\nEvery Day",
+        button: "Explore Articles"
       }
     },
     ko: {
       hero: {
-        title: "나만의 시선으로\n바라본 여행",
-        button: "지금 탐험하기"
+        title: "매일 코드하고\n배워가는 기록",
+        button: "글 둘러보기"
       }
     },
     zh: {
       hero: {
-        title: "我的视角\n旅行记录",
-        button: "立即探索"
+        title: "每天编程\n每天学习",
+        button: "探索文章"
       }
     },
     ja: {
       hero: {
-        title: "私の視点で見る\n旅の記録",
-        button: "今すぐ探索"
+        title: "毎日コードして\n毎日学ぶ記録",
+        button: "記事を探索"
       }
     }
   };
@@ -146,7 +146,7 @@ export const HokkaidoTravel: React.FC<HokkaidoTravelProps> = ({ locale }) => {
         }
 
         .a-breathtaking-view {
-          background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+          background-image: url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
           background-position: 50% 50%;
           background-size: cover;
           border-radius: 24px;

@@ -1,6 +1,6 @@
 ---
-title: "React Admin Dashboard"
-description: "Real-time data visualization dashboard built with React and Chart.js"
+title: "React-based Admin Dashboard"
+description: "Real-time data visualization dashboard using React and Chart.js"
 coverImage: ""
 tech: ["React", "TypeScript", "Chart.js", "Material-UI", "Socket.io"]
 projectUrl: "https://dashboard-demo.vercel.app"
@@ -10,28 +10,28 @@ featured: false
 date: "2023-12-10"
 ---
 
-# React Admin Dashboard
+# React-based Admin Dashboard
 
-A real-time data visualization dashboard built with React for administrative purposes. Features live chart updates using Chart.js and Socket.io.
+A React-based admin dashboard for real-time data visualization. Implemented real-time chart update functionality using Chart.js and Socket.io.
 
 ## Key Features
 
-- **Real-time Data**: Live data updates through Socket.io
-- **Multiple Charts**: Support for Line, Bar, Pie, and Doughnut charts
+- **Real-time Data**: Real-time data updates through Socket.io
+- **Various Charts**: Support for Line, Bar, Pie, Doughnut charts
 - **Responsive Layout**: Optimized UI for all devices
-- **Theme Support**: Light/Dark mode toggle
-- **Data Filtering**: Date range and category-based filtering
+- **Theme Support**: Light/Dark mode switching
+- **Data Filtering**: Filtering by date range and category
 
 ## Tech Stack
 
 ### Frontend
-- **React 18**: Latest React Hooks utilization
+- **React 18**: Utilizing latest React Hooks
 - **TypeScript**: Type safety
 - **Material-UI**: Consistent design system
 - **Chart.js**: Chart library
 
 ### Backend
-- **Node.js**: Server-side
+- **Node.js**: Server side
 - **Socket.io**: Real-time communication
 - **Express**: REST API
 - **MongoDB**: Database
@@ -54,6 +54,6 @@ useEffect(() => {
 ```
 
 ### Responsive Grid System
-- CSS Grid and Flexbox combined layout
-- Automatic chart resizing based on screen size
+- Layout combining CSS Grid and Flexbox
+- Automatic chart size adjustment based on screen size
 - Touch-friendly interactions on mobile 

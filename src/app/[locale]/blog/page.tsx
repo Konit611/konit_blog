@@ -15,29 +15,29 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   // Load translations for metadata
   const translations = {
     en: {
-      title: "Travel Blog - Latest Travel Stories and Tips",
-      description: "Browse our collection of travel stories, destination guides, and practical tips. Find inspiration for your next adventure and discover hidden gems around the world.",
-      keywords: "travel blog posts, travel stories, destination guides, travel tips, travel inspiration, adventure travel, travel experiences"
+      title: "Tech Blog - Latest Development Insights and TIL",
+      description: "Explore development insights, coding tutorials, and daily learnings. Discover programming tips, tech trends, and practical solutions for modern software development.",
+      keywords: "tech blog, programming tutorials, development insights, coding tips, TIL, software engineering, web development, technical articles"
     },
     ko: {
-      title: "여행 블로그 - 최신 여행 이야기와 팁",
-      description: "여행 이야기, 여행지 가이드, 실용적인 팁 모음을 둘러보세요. 다음 모험을 위한 영감을 찾고 전 세계의 숨겨진 보석을 발견하세요.",
-      keywords: "여행 블로그 포스트, 여행 이야기, 여행지 가이드, 여행 팁, 여행 영감, 모험 여행, 여행 경험"
+      title: "기술 블로그 - 최신 개발 인사이트와 TIL",
+      description: "개발 인사이트, 코딩 튜토리얼, 일일 학습 내용을 탐험해보세요. 프로그래밍 팁, 기술 트렌드, 현대 소프트웨어 개발을 위한 실용적인 해결책을 발견하세요.",
+      keywords: "기술 블로그, 프로그래밍 튜토리얼, 개발 인사이트, 코딩 팁, TIL, 소프트웨어 엔지니어링, 웹 개발, 기술 아티클"
     },
     zh: {
-      title: "旅行博客 - 最新旅行故事和技巧",
-      description: "浏览我们的旅行故事、目的地指南和实用技巧集合。为您的下一次冒险寻找灵感，发现世界各地的隐藏宝石。",
-      keywords: "旅行博客文章, 旅行故事, 目的地指南, 旅行技巧, 旅行灵感, 冒险旅行, 旅行体验"
+      title: "技术博客 - 最新开发见解与今日所学",
+      description: "探索开发见解、编程教程和日常学习内容。发现编程技巧、技术趋势和现代软件开发的实用解决方案。",
+      keywords: "技术博客, 编程教程, 开发见解, 编程技巧, 今日所学, 软件工程, 网页开发, 技术文章"
     },
     ja: {
-      title: "旅行ブログ - 最新の旅行ストーリーとヒント",
-      description: "旅行ストーリー、目的地ガイド、実用的なヒントのコレクションをご覧ください。次の冒険のインスピレーションを見つけ、世界中の隠れた宝石を発見してください。",
-      keywords: "旅行ブログ記事, 旅行ストーリー, 目的地ガイド, 旅行のヒント, 旅行インスピレーション, アドベンチャー旅行, 旅行体験"
+      title: "技術ブログ - 最新の開発インサイトとTIL",
+      description: "開発インサイト、プログラミングチュートリアル、日々の学習内容を探索してください。プログラミングのヒント、技術トレンド、現代のソフトウェア開発のための実用的なソリューションを発見してください。",
+      keywords: "技術ブログ, プログラミングチュートリアル, 開発インサイト, コーディングのヒント, TIL, ソフトウェアエンジニアリング, ウェブ開発, 技術記事"
     }
   };
 
   const t = translations[locale as keyof typeof translations] || translations.en;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://travelblog.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
   const canonicalUrl = `${siteUrl}/${locale}/blog`;
 
   return {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     keywords: t.keywords,
     authors: [{ name: 'Alex Chen' }],
     creator: 'Alex Chen',
-    publisher: 'Travel Blog',
+    publisher: 'Tech Blog',
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: canonicalUrl,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       title: t.title,
       description: t.description,
       url: canonicalUrl,
-      siteName: 'Travel Blog',
+      siteName: 'Tech Blog',
       locale: locale,
       type: 'website',
       images: [
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       card: 'summary_large_image',
       title: t.title,
       description: t.description,
-      creator: '@travelblogger',
+      creator: '@developer',
       images: [`${siteUrl}/images/og-blog.jpg`],
     },
     robots: {
@@ -110,12 +110,12 @@ export default async function BlogPage({ params }: BlogPageProps) {
     const categories = getAllCategories(locale);
 
     // Generate JSON-LD structured data for Blog
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://travelblog.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Blog',
-      name: 'Travel Blog',
-      description: 'Browse our collection of travel stories, destination guides, and practical tips. Find inspiration for your next adventure and discover hidden gems around the world.',
+      name: 'Tech Blog',
+      description: 'Browse our collection of development insights, coding tutorials, and technical articles. Find practical solutions for modern software development and discover the latest tech trends.',
       url: `${siteUrl}/${locale}/blog`,
       inLanguage: locale,
       author: {
@@ -125,7 +125,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Travel Blog',
+        name: 'Tech Blog',
         logo: {
           '@type': 'ImageObject',
           url: `${siteUrl}/images/logo.png`
@@ -148,7 +148,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       about: categories.map(category => ({
         '@type': 'Thing',
         name: category,
-        description: `Travel content about ${category}`
+        description: `Technical content about ${category}`
       }))
     };
 

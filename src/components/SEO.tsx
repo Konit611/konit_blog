@@ -31,7 +31,7 @@ export function generateSEOMetadata({
   tags = [],
   alternateLanguages = {},
 }: SEOProps): Metadata {
-  const siteName = 'Travel Blog';
+  const siteName = 'Tech Blog';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   
   // Base metadata
@@ -160,7 +160,7 @@ export function generateArticleStructuredData({
 // Utility function for generating website structured data
 export function generateWebsiteStructuredData({
   url,
-  name = 'Travel Blog',
+  name = 'Tech Blog',
   description,
   locale = 'en',
 }: {

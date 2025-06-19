@@ -9,19 +9,19 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
   const translations = {
     en: {
       brand: "Konit",
-      description: "Discover amazing travel destinations around the world. From hidden gems to popular attractions, we bring you the best travel experiences and guides."
+      description: "Explore programming insights, development tutorials, and technical deep-dives. Share knowledge about modern software development, web technologies, and daily learnings (TIL)."
     },
     ko: {
       brand: "Konit",
-      description: "전 세계의 놀라운 여행지를 발견하세요. 숨겨진 보석 같은 장소부터 인기 명소까지, 최고의 여행 경험과 가이드를 제공합니다."
+      description: "프로그래밍 인사이트, 개발 튜토리얼, 기술 심화 내용을 탐험해보세요. 현대 소프트웨어 개발, 웹 기술, 일일 학습(TIL)에 대한 지식을 공유합니다."
     },
     zh: {
       brand: "Konit",
-      description: "发现世界各地令人惊叹的旅行目的地。从隐藏的宝石到热门景点，我们为您带来最佳的旅行体验和指南。"
+      description: "探索编程见解、开发教程和技术深度解析。分享现代软件开发、网络技术和日常学习(TIL)的知识。"
     },
     ja: {
       brand: "Konit",
-      description: "世界中の素晴らしい旅行先を発見してください。隠れた名所から人気の観光地まで、最高の旅行体験とガイドをお届けします。"
+      description: "プログラミングの洞察、開発チュートリアル、技術的な深掘りを探索してください。現代のソフトウェア開発、ウェブ技術、日々の学習(TIL)に関する知識を共有します。"
     }
   };
 

@@ -17,19 +17,19 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   try {
     const { locale, slug } = await params;
     const post = getPostBySlug(slug, locale);
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://travelblog.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
     const canonicalUrl = `${siteUrl}/${locale}/blog/${slug}`;
     
     return {
-      title: `${post.title} - Travel Blog`,
-      description: post.excerpt || `Read about ${post.title} on our travel blog.`,
+      title: `${post.title} - Tech Blog`,
+      description: post.excerpt || `Read about ${post.title} on our tech blog.`,
       alternates: {
         canonical: canonicalUrl,
       },
     };
   } catch (error) {
     return {
-      title: 'Post Not Found - Travel Blog',
+      title: 'Post Not Found - Tech Blog',
       description: 'The requested blog post could not be found.',
     };
   }

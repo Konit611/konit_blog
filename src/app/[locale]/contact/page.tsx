@@ -13,38 +13,38 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   // Load translations for metadata
   const translations = {
     en: {
-      title: "Contact - Travel Blog",
-      description: "Get in touch with Alex Chen, travel blogger and adventurer. Connect with us for travel tips, collaboration opportunities, or just to share your travel stories.",
-      keywords: "contact travel blogger, travel blog contact, Alex Chen contact, travel collaboration, travel tips contact"
+      title: "Contact - Tech Portfolio",
+      description: "Get in touch with me for development projects, collaboration opportunities, or technical discussions. Let's build something amazing together.",
+      keywords: "contact developer, tech portfolio contact, software developer contact, development collaboration, tech consultation"
     },
     ko: {
-      title: "연락처 - 여행 블로그",
-      description: "여행 블로거이자 모험가인 알렉스 첸과 연락하세요. 여행 팁, 협업 기회, 또는 여행 이야기를 공유하기 위해 연락주세요.",
-      keywords: "여행 블로거 연락처, 여행 블로그 연락처, 알렉스 첸 연락처, 여행 협업, 여행 팁 연락처"
+      title: "연락처 - 기술 포트폴리오",
+      description: "개발 프로젝트, 협업 기회, 또는 기술적 논의를 위해 연락주세요. 함께 멋진 것을 만들어봅시다.",
+      keywords: "개발자 연락처, 기술 포트폴리오 연락처, 소프트웨어 개발자 연락처, 개발 협업, 기술 컨설팅"
     },
     zh: {
-      title: "联系我们 - 旅行博客",
-      description: "与旅行博主和冒险家陈亚历克斯取得联系。联系我们获取旅行技巧、合作机会，或只是分享您的旅行故事。",
-      keywords: "联系旅行博主, 旅行博客联系, 陈亚历克斯联系, 旅行合作, 旅行技巧联系"
+      title: "联系我们 - 技术作品集",
+      description: "联系我进行开发项目、合作机会或技术讨论。让我们一起创建令人惊叹的东西。",
+      keywords: "联系开发者, 技术作品集联系, 软件开发者联系, 开发合作, 技术咨询"
     },
     ja: {
-      title: "お問い合わせ - 旅行ブログ",
-      description: "旅行ブロガーで冒険家のアレックス・チェンにお問い合わせください。旅行のヒント、コラボレーションの機会、または旅行ストーリーの共有についてご連絡ください。",
-      keywords: "旅行ブロガー連絡先, 旅行ブログ連絡先, アレックス・チェン連絡先, 旅行コラボレーション, 旅行ヒント連絡先"
+      title: "お問い合わせ - 技術ポートフォリオ",
+      description: "開発プロジェクト、コラボレーションの機会、または技術的な議論についてお気軽にお問い合わせください。一緒に素晴らしいものを作りましょう。",
+      keywords: "開発者連絡先, 技術ポートフォリオ連絡先, ソフトウェア開発者連絡先, 開発コラボレーション, 技術コンサルティング"
     }
   };
 
   const t = translations[locale as keyof typeof translations] || translations.en;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://travelblog.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techportfolio.com';
   const canonicalUrl = `${siteUrl}/${locale}/contact`;
 
   return {
     title: t.title,
     description: t.description,
     keywords: t.keywords,
-    authors: [{ name: 'Alex Chen' }],
-    creator: 'Alex Chen',
-    publisher: 'Travel Blog',
+    authors: [{ name: 'Developer' }],
+    creator: 'Developer',
+    publisher: 'Tech Portfolio',
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: canonicalUrl,
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
       title: t.title,
       description: t.description,
       url: canonicalUrl,
-      siteName: 'Travel Blog',
+      siteName: 'Tech Portfolio',
       locale: locale,
       type: 'website',
       images: [
@@ -75,7 +75,7 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
       card: 'summary_large_image',
       title: t.title,
       description: t.description,
-      creator: '@travelblogger',
+      creator: '@developer',
       images: [`${siteUrl}/images/og-contact.jpg`],
     },
     robots: {
