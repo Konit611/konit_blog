@@ -3,6 +3,8 @@
     "home": "Home",
     "about": "About",
     "blog": "Blog",
+    "portfolio": "Portfolio",
+    "career": "Career",
     "contact": "Contact",
     "categories": "Categories"
   },
@@ -23,8 +25,8 @@
     "next": "Next"
   },
   "blog": {
-    "title": "Travel Blog",
-    "subtitle": "Discover amazing destinations around the world",
+    "title": "Tech Blog",
+    "subtitle": "Development insights, coding tutorials, and daily learnings",
     "latestPosts": "Latest Posts",
     "allPosts": "All Posts",
     "noPostsFound": "No posts found",
@@ -45,62 +47,62 @@
     "noPostsInCategory": "No posts found in this category"
   },
   "contact": {
-    "title": "Contact - Travel Blog",
-    "description": "Get in touch with us for travel tips, collaborations, or just to share your travel stories.",
-    "keywords": "contact, travel blogger, travel tips, collaboration, travel stories",
+    "title": "Contact - Tech Portfolio",
+    "description": "Get in touch for development projects, collaboration opportunities, or technical discussions.",
+    "keywords": "contact, developer, tech portfolio, collaboration, software development",
     "heading": "Get in Touch",
-    "subtitle": "I'd love to hear from fellow travelers and share experiences!",
+    "subtitle": "Let's discuss your next project or collaboration opportunity!",
     "info": {
       "title": "Contact Information"
     },
     "name": "Name",
     "bloggerName": "Alex Chen",
     "email": "Email",
-    "emailAddress": "hello@travelblog.com",
+    "emailAddress": "hello@techportfolio.com",
     "location": "Location",
     "locationText": "Seoul, South Korea",
     "social": "Social Media",
-    "twitter": "travelblogger",
-    "twitterUrl": "https://twitter.com/travelblogger",
-    "instagram": "alextravel",
-    "instagramUrl": "https://instagram.com/alextravel",
+    "twitter": "developer",
+    "twitterUrl": "https://twitter.com/developer",
+    "instagram": "alexdev",
+    "instagramUrl": "https://instagram.com/alexdev",
     "github": "alexchen",
     "githubUrl": "https://github.com/alexchen",
-    "linkedin": "alexchen-travel",
-    "linkedinUrl": "https://linkedin.com/in/alexchen-travel",
+    "linkedin": "alexchen-dev",
+    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
     "about": "About Me",
-    "aboutText": "Hi! I'm Alex, a passionate traveler and blogger based in Seoul. I've been exploring the world for over 8 years, visiting more than 30 countries across Asia, Europe, and the Americas.\n\nI started this blog to share my travel experiences, tips, and stories with fellow adventurers. Whether you're planning your first solo trip or you're a seasoned traveler looking for hidden gems, I hope my content inspires and helps you on your journey.\n\nWhen I'm not traveling, you can find me exploring local cafes in Seoul, learning new languages, or planning my next adventure.",
-    "languages": "Languages I Speak",
+    "aboutText": "Hi! I'm Alex, a passionate full-stack developer based in Seoul. I have over 6 years of experience in software development, specializing in web technologies, mobile apps, and cloud solutions.\n\nI love building innovative solutions that solve real-world problems. My expertise spans across React, Node.js, Python, and modern web technologies. I'm always eager to learn new technologies and share my knowledge with the developer community.\n\nWhen I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, or mentoring aspiring developers.",
+    "languages": "Programming Languages",
     "language": {
-      "en": "English",
-      "ko": "Korean",
-      "zh": "Chinese",
-      "ja": "Japanese"
+      "en": "JavaScript/TypeScript",
+      "ko": "Python",
+      "zh": "Java",
+      "ja": "Go"
     },
-    "interests": "Travel Interests",
-    "interestsList": "Solo Travel, Food Tourism, Cultural Experiences, Photography, Budget Travel, Adventure Sports, Local Markets, Historical Sites",
+    "interests": "Tech Interests",
+    "interestsList": "Full-Stack Development, Cloud Computing, DevOps, Machine Learning, Open Source, Mobile Development, System Architecture, API Design",
     "cta": {
-      "title": "Let's Connect!",
-      "description": "Whether you have travel questions, collaboration ideas, or just want to share your own travel stories, I'd love to hear from you.",
+      "title": "Let's Build Something Amazing!",
+      "description": "Whether you have a project idea, need technical consultation, or want to collaborate on something exciting, I'd love to hear from you.",
       "button": "Send Email"
     }
   },
   "footer": {
     "quickLinks": "Quick Links",
     "language": "Language",
-    "contact": "Contact us:",
+    "contact": "Contact me:",
     "allRightsReserved": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "copyright": "© {{year}} Travel Blog. All rights reserved.",
-    "followUs": "Follow Us",
+    "copyright": "© {{year}} Tech Portfolio. All rights reserved.",
+    "followUs": "Follow Me",
     "newsletter": "Newsletter",
     "subscribe": "Subscribe",
     "emailPlaceholder": "Enter your email"
   },
   "meta": {
-    "defaultTitle": "Travel Blog - Discover Amazing Destinations",
-    "defaultDescription": "Explore the world through our travel stories, tips, and guides. Discover amazing destinations, local cultures, and unforgettable experiences.",
-    "keywords": "travel blog, travel destinations, travel tips, travel guides, world travel, adventure, tourism, travel stories, vacation, backpacking"
+    "defaultTitle": "Tech Portfolio - Full Stack Developer",
+    "defaultDescription": "Explore my development projects, technical articles, and professional journey. Discover innovative solutions in web development, mobile apps, and cloud technologies.",
+    "keywords": "tech portfolio, full stack developer, web development, software engineering, React, Node.js, programming, technology"
   }
 } 

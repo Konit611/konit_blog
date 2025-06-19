@@ -3,7 +3,9 @@
     "home": "首页",
     "about": "关于",
     "blog": "博客",
-    "contact": "联系",
+    "portfolio": "作品集",
+    "career": "职业经历",
+    "contact": "联系我",
     "categories": "分类"
   },
   "common": {
@@ -23,78 +25,84 @@
     "next": "下一页"
   },
   "blog": {
-    "title": "旅行博客",
-    "subtitle": "发现世界各地的精彩目的地",
+    "title": "技术博客",
+    "subtitle": "开发见解、编程教程和日常学习",
     "latestPosts": "最新文章",
     "allPosts": "所有文章",
     "noPostsFound": "未找到文章",
+    "noPostsAvailable": "暂无可用文章",
+    "noPostsInCategory": "在{{category}}中未找到文章",
     "relatedPosts": "相关文章",
     "publishedOn": "发布于",
-    "readTime": "分钟阅读",
-    "author": "作者"
+    "readTime": "{{time}}分钟阅读",
+    "readMore": "阅读更多",
+    "author": "作者",
+    "showingPosts": "{{count}}篇文章",
+    "inCategory": "在\"{{category}}\"分类中",
+    "paginationInfo": "第{{currentPage}}/{{totalPages}}页 • 显示第{{startIndex}}-{{endIndex}}篇，共{{total}}篇文章"
   },
   "categories": {
     "allCategories": "所有分类",
-    "postsInCategory": "{{category}}中的文章",
-    "noPostsInCategory": "此分类中没有文章"
+    "postsInCategory": "{{category}}分类文章",
+    "noPostsInCategory": "此分类中未找到文章"
   },
   "contact": {
-    "title": "联系我们 - 旅行博客",
-    "description": "如果您有旅行建议、合作想法或想分享您的旅行故事，请随时与我们联系。",
-    "keywords": "联系方式, 旅行博主, 旅行建议, 合作, 旅行故事",
-    "heading": "联系我们",
-    "subtitle": "我很乐意与旅行爱好者交流分享经验！",
+    "title": "联系我 - 技术作品集",
+    "description": "联系我进行开发项目、合作机会或技术讨论。",
+    "keywords": "联系, 开发者, 技术作品集, 合作, 软件开发",
+    "heading": "联系我",
+    "subtitle": "让我们讨论您的下一个项目或合作机会！",
     "info": {
       "title": "联系信息"
     },
     "name": "姓名",
     "bloggerName": "陈亚历克斯",
     "email": "邮箱",
-    "emailAddress": "hello@travelblog.com",
+    "emailAddress": "hello@techportfolio.com",
     "location": "位置",
     "locationText": "韩国首尔",
     "social": "社交媒体",
-    "twitter": "travelblogger",
-    "twitterUrl": "https://twitter.com/travelblogger",
-    "instagram": "alextravel",
-    "instagramUrl": "https://instagram.com/alextravel",
+    "twitter": "developer",
+    "twitterUrl": "https://twitter.com/developer",
+    "instagram": "alexdev",
+    "instagramUrl": "https://instagram.com/alexdev",
     "github": "alexchen",
     "githubUrl": "https://github.com/alexchen",
-    "linkedin": "alexchen-travel",
-    "linkedinUrl": "https://linkedin.com/in/alexchen-travel",
+    "linkedin": "alexchen-dev",
+    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
     "about": "关于我",
-    "aboutText": "你好！我是亚历克斯，一位居住在首尔的热情旅行者和博主。我已经探索世界超过8年，访问了亚洲、欧洲和美洲的30多个国家。\n\n我创建这个博客是为了与旅行爱好者分享我的旅行经历、建议和故事。无论您是在计划第一次独自旅行，还是寻找隐藏宝石的资深旅行者，我希望我的内容能够启发并帮助您的旅程。\n\n不旅行的时候，您可以在首尔的当地咖啡馆找到我，学习新语言，或者计划下一次冒险。",
-    "languages": "我会说的语言",
+    "aboutText": "您好！我是亚历克斯，一位居住在首尔的热情全栈开发者。我在软件开发方面有6年以上的经验，专注于Web技术、移动应用和云解决方案。\n\n我喜欢构建解决实际问题的创新解决方案。我的专业技能涵盖React、Node.js、Python和现代Web技术。我总是渴望学习新技术并与开发者社区分享我的知识。\n\n当我不在编程时，您可以发现我在探索新的技术趋势、为开源项目做贡献，或指导有抱负的开发者。",
+    "languages": "编程语言",
     "language": {
-      "en": "英语",
-      "ko": "韩语",
-      "zh": "中文",
-      "ja": "日语"
+      "en": "JavaScript/TypeScript",
+      "ko": "Python",
+      "zh": "Java",
+      "ja": "Go"
     },
-    "interests": "旅行兴趣",
-    "interestsList": "独自旅行, 美食旅游, 文化体验, 摄影, 预算旅行, 冒险运动, 当地市场, 历史遗迹",
+    "interests": "技术兴趣",
+    "interestsList": "全栈开发、云计算、DevOps、机器学习、开源、移动开发、系统架构、API设计",
     "cta": {
-      "title": "让我们联系吧！",
-      "description": "无论您有旅行问题、合作想法，还是只是想分享您自己的旅行故事，我都很乐意听到您的声音。",
+      "title": "让我们一起创建令人惊叹的东西！",
+      "description": "无论您有项目想法、需要技术咨询，还是想要合作做一些令人兴奋的事情，我都很乐意听到您的想法。",
       "button": "发送邮件"
     }
   },
   "footer": {
     "quickLinks": "快速链接",
     "language": "语言",
-    "contact": "联系我们:",
-    "allRightsReserved": "版权所有.",
+    "contact": "联系我：",
+    "allRightsReserved": "版权所有。",
     "privacy": "隐私政策",
     "terms": "服务条款",
-    "copyright": "© {{year}} 旅行博客. 版权所有.",
-    "followUs": "关注我们",
-    "newsletter": "订阅",
+    "copyright": "© {{year}} 技术作品集。版权所有。",
+    "followUs": "关注我",
+    "newsletter": "新闻通讯",
     "subscribe": "订阅",
     "emailPlaceholder": "输入您的邮箱"
   },
   "meta": {
-    "defaultTitle": "旅行博客 - 发现精彩目的地",
-    "defaultDescription": "通过我们的旅行故事、技巧和指南探索世界。发现精彩目的地、当地文化和难忘体验.",
-    "keywords": "旅行博客, 旅行目的地, 旅行技巧, 旅行指南, 世界旅行, 冒险, 旅游, 旅行故事, 度假, 背包旅行"
+    "defaultTitle": "技术作品集 - 全栈开发者",
+    "defaultDescription": "探索我的开发项目、技术文章和职业历程。发现Web开发、移动应用和云技术的创新解决方案。",
+    "keywords": "技术作品集, 全栈开发者, Web开发, 软件工程, React, Node.js, 编程, 技术"
   }
 } 

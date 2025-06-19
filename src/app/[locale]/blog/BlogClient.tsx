@@ -20,6 +20,7 @@ export default function BlogClient({ posts, categories, locale }: BlogClientProp
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [isClient, setIsClient] = useState(false);
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
   // Ensure we're on the client side to prevent hydration mismatches
   useEffect(() => {
@@ -30,6 +31,11 @@ export default function BlogClient({ posts, categories, locale }: BlogClientProp
   useEffect(() => {
     setCurrentPage(1);
   }, [selectedCategory]);
+
+  // Handle image error
+  const handleImageError = (postSlug: string) => {
+    setImageErrors(prev => ({ ...prev, [postSlug]: true }));
+  };
 
   const filteredPosts = selectedCategory
     ? posts.filter(post => 
@@ -119,15 +125,26 @@ export default function BlogClient({ posts, categories, locale }: BlogClientProp
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {currentPosts.map(post => (
                   <article key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    {post.coverImage && (
-                      <div className="aspect-video overflow-hidden">
-                        <img 
-                          src={post.coverImage} 
-                          alt={post.title} 
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    )}
+                    {/* Post Image */}
+                    <div className="aspect-video overflow-hidden">
+                      <a href={`/${locale}/blog/${post.slug}`}>
+                        {post.coverImage && !imageErrors[post.slug] ? (
+                          <img 
+                            src={post.coverImage} 
+                            alt={post.title} 
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            onError={() => handleImageError(post.slug)}
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center hover:from-green-500 hover:to-blue-700 transition-colors">
+                            <div className="text-white text-lg font-semibold text-center px-4 line-clamp-3">
+                              {post.title}
+                            </div>
+                          </div>
+                        )}
+                      </a>
+                    </div>
+                    
                     <div className="p-6">
                       <div className="flex flex-wrap gap-2 mb-3">
                         {post.categories.map(category => (
