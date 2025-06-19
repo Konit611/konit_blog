@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 interface HeaderProps {
   locale: string;
@@ -16,6 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
         home: "Home",
         blog: "Blog",
         portfolio: "Portfolio",
+        career: "Career",
         contact: "Contact"
       }
     },
@@ -25,6 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
         home: "홈",
         blog: "블로그",
         portfolio: "포트폴리오",
+        career: "경력",
         contact: "연락처"
       }
     },
@@ -34,6 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
         home: "首页",
         blog: "博客",
         portfolio: "作品集",
+        career: "职业经历",
         contact: "联系"
       }
     },
@@ -43,6 +47,7 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
         home: "ホーム",
         blog: "ブログ",
         portfolio: "ポートフォリオ",
+        career: "キャリア",
         contact: "お問い合わせ"
       }
     }
@@ -61,27 +66,40 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
           </Link>
         </div>
 
-        <div className="inline-flex items-start gap-8 relative flex-[0_0_auto]">
-          <Link href={`/${locale}`}>
-            <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
-              {t.nav.home}
-            </div>
-          </Link>
-          <Link href={`/${locale}/blog`}>
-            <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
-              {t.nav.blog}
-            </div>
-          </Link>
-          <Link href={`/${locale}/portfolio`}>
-            <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
-              {t.nav.portfolio}
-            </div>
-          </Link>
-          <Link href={`/${locale}/contact`}>
-            <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
-              {t.nav.contact}
-            </div>
-          </Link>
+        <div className="flex items-center gap-8">
+          {/* 네비게이션 메뉴 */}
+          <div className="inline-flex items-start gap-8 relative flex-[0_0_auto]">
+            <Link href={`/${locale}`}>
+              <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
+                {t.nav.home}
+              </div>
+            </Link>
+            <Link href={`/${locale}/blog`}>
+              <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
+                {t.nav.blog}
+              </div>
+            </Link>
+            <Link href={`/${locale}/portfolio`}>
+              <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
+                {t.nav.portfolio}
+              </div>
+            </Link>
+            <Link href={`/${locale}/career`}>
+              <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
+                {t.nav.career}
+              </div>
+            </Link>
+            <Link href={`/${locale}/contact`}>
+              <div className="relative w-fit mt-[-1.00px] font-libre-franklin font-medium text-black text-[28px] tracking-[-0.28px] leading-8 whitespace-nowrap hover:text-gray-600 transition-colors cursor-pointer">
+                {t.nav.contact}
+              </div>
+            </Link>
+          </div>
+
+          {/* 언어 전환 드롭다운 */}
+          <div className="flex items-center">
+            <LanguageSwitcher currentLocale={locale} />
+          </div>
         </div>
       </div>
 
