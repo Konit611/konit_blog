@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "home": "ホーム",
+    "about": "概要",
+    "blog": "ブログ",
+    "portfolio": "ポートフォリオ",
+    "career": "キャリア",
+    "contact": "お問い合わせ",
+    "categories": "カテゴリー"
+  },
+  "common": {
+    "readMore": "続きを読む",
+    "backToHome": "ホームに戻る",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "notFound": "見つかりません",
+    "search": "検索",
+    "searchPlaceholder": "投稿を検索...",
+    "language": "言語",
+    "date": "日付",
+    "category": "カテゴリー",
+    "tags": "タグ",
+    "share": "共有",
+    "previous": "前へ",
+    "next": "次へ"
+  },
+  "blog": {
+    "title": "技術ブログ",
+    "subtitle": "開発インサイト、プログラミングチュートリアル、日々の学習",
+    "latestPosts": "最新の投稿",
+    "allPosts": "すべての投稿",
+    "noPostsFound": "投稿が見つかりません",
+    "noPostsAvailable": "利用可能な投稿がありません",
+    "noPostsInCategory": "{{category}}で投稿が見つかりません",
+    "relatedPosts": "関連記事",
+    "publishedOn": "公開日",
+    "readTime": "{{time}}分で読めます",
+    "readMore": "続きを読む",
+    "author": "著者",
+    "showingPosts": "{{count}}件の投稿",
+    "inCategory": "「{{category}}」カテゴリー",
+    "paginationInfo": "{{currentPage}}/{{totalPages}}ページ • {{startIndex}}-{{endIndex}}/{{total}}件の投稿を表示"
+  },
+  "categories": {
+    "allCategories": "すべてのカテゴリー",
+    "postsInCategory": "{{category}}カテゴリーの投稿",
+    "noPostsInCategory": "このカテゴリーで投稿が見つかりません"
+  },
+  "contact": {
+    "title": "お問い合わせ - 技術ポートフォリオ",
+    "description": "開発プロジェクト、コラボレーションの機会、または技術的な議論についてお気軽にお問い合わせください。",
+    "keywords": "お問い合わせ, 開発者, 技術ポートフォリオ, コラボレーション, ソフトウェア開発",
+    "heading": "お問い合わせ",
+    "subtitle": "次のプロジェクトやコラボレーションの機会について話し合いましょう！",
+    "info": {
+      "title": "連絡先情報"
+    },
+    "name": "名前",
+    "bloggerName": "アレックス・チェン",
+    "email": "メール",
+    "emailAddress": "hello@techportfolio.com",
+    "location": "所在地",
+    "locationText": "韓国ソウル",
+    "social": "ソーシャルメディア",
+    "twitter": "developer",
+    "twitterUrl": "https://twitter.com/developer",
+    "instagram": "alexdev",
+    "instagramUrl": "https://instagram.com/alexdev",
+    "github": "alexchen",
+    "githubUrl": "https://github.com/alexchen",
+    "linkedin": "alexchen-dev",
+    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
+    "about": "自己紹介",
+    "aboutText": "こんにちは！私はソウル在住の情熱的なフルスタック開発者のアレックスです。Webテクノロジー、モバイルアプリ、クラウドソリューションを専門とし、6年以上のソフトウェア開発経験があります。\n\n実際の問題を解決する革新的なソリューションを構築することが大好きです。React、Node.js、Python、最新のWebテクノロジーに関する専門知識を持っています。常に新しいテクノロジーを学び、開発者コミュニティと知識を共有することを心がけています。\n\nコーディングをしていない時は、新しい技術トレンドを探求したり、オープンソースプロジェクトに貢献したり、意欲的な開発者をメンタリングしたりしています。",
+    "languages": "プログラミング言語",
+    "language": {
+      "en": "JavaScript/TypeScript",
+      "ko": "Python",
+      "zh": "Java",
+      "ja": "Go"
+    },
+    "interests": "技術的関心事",
+    "interestsList": "フルスタック開発、クラウドコンピューティング、DevOps、機械学習、オープンソース、モバイル開発、システムアーキテクチャ、API設計",
+    "cta": {
+      "title": "一緒に素晴らしいものを作りましょう！",
+      "description": "プロジェクトのアイデアがある、技術的なコンサルテーションが必要、またはエキサイティングなコラボレーションをしたい場合は、ぜひご連絡ください。",
+      "button": "メールを送る"
+    }
+  },
+  "footer": {
+    "quickLinks": "クイックリンク",
+    "language": "言語",
+    "contact": "お問い合わせ：",
+    "allRightsReserved": "全ての権利を保有しています。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "© {{year}} 技術ポートフォリオ。全ての権利を保有しています。",
+    "followUs": "フォロー",
+    "newsletter": "ニュースレター",
+    "subscribe": "購読",
+    "emailPlaceholder": "メールアドレスを入力"
+  },
+  "meta": {
+    "defaultTitle": "技術ポートフォリオ - フルスタック開発者",
+    "defaultDescription": "開発プロジェクト、技術記事、プロフェッショナルな歩みを探索してください。Web開発、モバイルアプリ、クラウド技術における革新的なソリューションを発見してください。",
+    "keywords": "技術ポートフォリオ, フルスタック開発者, Web開発, ソフトウェアエンジニアリング, React, Node.js, プログラミング, テクノロジー"
+  }
+} 

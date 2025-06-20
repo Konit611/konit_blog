@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "portfolio": "Portfolio",
+    "career": "Career",
+    "contact": "Contact",
+    "categories": "Categories"
+  },
+  "common": {
+    "readMore": "Read More",
+    "backToHome": "Back to Home",
+    "loading": "Loading...",
+    "error": "Error",
+    "notFound": "Not Found",
+    "search": "Search",
+    "searchPlaceholder": "Search posts...",
+    "language": "Language",
+    "date": "Date",
+    "category": "Category",
+    "tags": "Tags",
+    "share": "Share",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "blog": {
+    "title": "Tech Blog",
+    "subtitle": "Development insights, coding tutorials, and daily learnings",
+    "latestPosts": "Latest Posts",
+    "allPosts": "All Posts",
+    "noPostsFound": "No posts found",
+    "noPostsAvailable": "No posts available",
+    "noPostsInCategory": "No posts found in {{category}}",
+    "relatedPosts": "Related Posts",
+    "publishedOn": "Published on",
+    "readTime": "{{time}} min read",
+    "readMore": "Read More",
+    "author": "Author",
+    "showingPosts": "{{count}} posts",
+    "inCategory": "in \"{{category}}\"",
+    "paginationInfo": "Page {{currentPage}} of {{totalPages}} • Showing {{startIndex}}-{{endIndex}} of {{total}} posts"
+  },
+  "categories": {
+    "allCategories": "All Categories",
+    "postsInCategory": "Posts in {{category}}",
+    "noPostsInCategory": "No posts found in this category"
+  },
+  "contact": {
+    "title": "Contact - Tech Portfolio",
+    "description": "Get in touch for development projects, collaboration opportunities, or technical discussions.",
+    "keywords": "contact, developer, tech portfolio, collaboration, software development",
+    "heading": "Get in Touch",
+    "subtitle": "Let's discuss your next project or collaboration opportunity!",
+    "info": {
+      "title": "Contact Information"
+    },
+    "name": "Name",
+    "bloggerName": "Alex Chen",
+    "email": "Email",
+    "emailAddress": "hello@techportfolio.com",
+    "location": "Location",
+    "locationText": "Seoul, South Korea",
+    "social": "Social Media",
+    "twitter": "developer",
+    "twitterUrl": "https://twitter.com/developer",
+    "instagram": "alexdev",
+    "instagramUrl": "https://instagram.com/alexdev",
+    "github": "alexchen",
+    "githubUrl": "https://github.com/alexchen",
+    "linkedin": "alexchen-dev",
+    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
+    "about": "About Me",
+    "aboutText": "Hi! I'm Alex, a passionate full-stack developer based in Seoul. I have over 6 years of experience in software development, specializing in web technologies, mobile apps, and cloud solutions.\n\nI love building innovative solutions that solve real-world problems. My expertise spans across React, Node.js, Python, and modern web technologies. I'm always eager to learn new technologies and share my knowledge with the developer community.\n\nWhen I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, or mentoring aspiring developers.",
+    "languages": "Programming Languages",
+    "language": {
+      "en": "JavaScript/TypeScript",
+      "ko": "Python",
+      "zh": "Java",
+      "ja": "Go"
+    },
+    "interests": "Tech Interests",
+    "interestsList": "Full-Stack Development, Cloud Computing, DevOps, Machine Learning, Open Source, Mobile Development, System Architecture, API Design",
+    "cta": {
+      "title": "Let's Build Something Amazing!",
+      "description": "Whether you have a project idea, need technical consultation, or want to collaborate on something exciting, I'd love to hear from you.",
+      "button": "Send Email"
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "language": "Language",
+    "contact": "Contact me:",
+    "allRightsReserved": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© {{year}} Tech Portfolio. All rights reserved.",
+    "followUs": "Follow Me",
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Enter your email"
+  },
+  "meta": {
+    "defaultTitle": "Tech Portfolio - Full Stack Developer",
+    "defaultDescription": "Explore my development projects, technical articles, and professional journey. Discover innovative solutions in web development, mobile apps, and cloud technologies.",
+    "keywords": "tech portfolio, full stack developer, web development, software engineering, React, Node.js, programming, technology"
+  }
+} 

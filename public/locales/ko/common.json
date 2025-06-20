@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "home": "홈",
+    "about": "소개",
+    "blog": "블로그",
+    "portfolio": "포트폴리오",
+    "career": "경력",
+    "contact": "연락처",
+    "categories": "카테고리"
+  },
+  "common": {
+    "readMore": "더 읽기",
+    "backToHome": "홈으로 돌아가기",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "notFound": "찾을 수 없음",
+    "search": "검색",
+    "searchPlaceholder": "포스트 검색...",
+    "language": "언어",
+    "date": "날짜",
+    "category": "카테고리",
+    "tags": "태그",
+    "share": "공유",
+    "previous": "이전",
+    "next": "다음"
+  },
+  "blog": {
+    "title": "기술 블로그",
+    "subtitle": "개발 인사이트, 코딩 튜토리얼, 일일 학습 내용",
+    "latestPosts": "최신 포스트",
+    "allPosts": "모든 포스트",
+    "noPostsFound": "포스트를 찾을 수 없습니다",
+    "noPostsAvailable": "사용할 수 있는 포스트가 없습니다",
+    "noPostsInCategory": "{{category}}에서 포스트를 찾을 수 없습니다",
+    "relatedPosts": "관련 포스트",
+    "publishedOn": "게시일",
+    "readTime": "{{time}}분 읽기",
+    "readMore": "더 읽기",
+    "author": "작성자",
+    "showingPosts": "{{count}}개 포스트",
+    "inCategory": "\"{{category}}\" 카테고리",
+    "paginationInfo": "{{currentPage}}/{{totalPages}} 페이지 • {{startIndex}}-{{endIndex}}/{{total}} 포스트"
+  },
+  "categories": {
+    "allCategories": "모든 카테고리",
+    "postsInCategory": "{{category}} 포스트",
+    "noPostsInCategory": "이 카테고리에서 포스트를 찾을 수 없습니다"
+  },
+  "contact": {
+    "title": "연락처 - 기술 포트폴리오",
+    "description": "개발 프로젝트, 협업 기회, 또는 기술적 논의를 위해 연락주세요.",
+    "keywords": "연락처, 개발자, 기술 포트폴리오, 협업, 소프트웨어 개발",
+    "heading": "연락하기",
+    "subtitle": "다음 프로젝트나 협업 기회에 대해 이야기해보세요!",
+    "info": {
+      "title": "연락처 정보"
+    },
+    "name": "이름",
+    "bloggerName": "알렉스 첸",
+    "email": "이메일",
+    "emailAddress": "hello@techportfolio.com",
+    "location": "위치",
+    "locationText": "대한민국 서울",
+    "social": "소셜 미디어",
+    "twitter": "developer",
+    "twitterUrl": "https://twitter.com/developer",
+    "instagram": "alexdev",
+    "instagramUrl": "https://instagram.com/alexdev",
+    "github": "alexchen",
+    "githubUrl": "https://github.com/alexchen",
+    "linkedin": "alexchen-dev",
+    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
+    "about": "자기소개",
+    "aboutText": "안녕하세요! 저는 서울에 거주하는 열정적인 풀스택 개발자 알렉스입니다. 웹 기술, 모바일 앱, 클라우드 솔루션을 전문으로 하며 6년 이상의 소프트웨어 개발 경험을 가지고 있습니다.\n\n실제 문제를 해결하는 혁신적인 솔루션을 구축하는 것을 좋아합니다. React, Node.js, Python 및 최신 웹 기술에 대한 전문 지식을 보유하고 있습니다. 항상 새로운 기술을 배우고 개발자 커뮤니티와 지식을 공유하고자 합니다.\n\n코딩을 하지 않을 때는 새로운 기술 트렌드를 탐구하거나, 오픈소스 프로젝트에 기여하거나, 신진 개발자들을 멘토링하고 있습니다.",
+    "languages": "프로그래밍 언어",
+    "language": {
+      "en": "JavaScript/TypeScript",
+      "ko": "Python",
+      "zh": "Java",
+      "ja": "Go"
+    },
+    "interests": "기술 관심사",
+    "interestsList": "풀스택 개발, 클라우드 컴퓨팅, DevOps, 머신러닝, 오픈소스, 모바일 개발, 시스템 아키텍처, API 설계",
+    "cta": {
+      "title": "함께 멋진 것을 만들어봅시다!",
+      "description": "프로젝트 아이디어가 있거나, 기술 컨설팅이 필요하거나, 흥미로운 협업을 원한다면 언제든 연락주세요.",
+      "button": "이메일 보내기"
+    }
+  },
+  "footer": {
+    "quickLinks": "빠른 링크",
+    "language": "언어",
+    "contact": "연락처:",
+    "allRightsReserved": "모든 권리 보유.",
+    "privacy": "개인정보처리방침",
+    "terms": "이용약관",
+    "copyright": "© {{year}} 기술 포트폴리오. 모든 권리 보유.",
+    "followUs": "팔로우",
+    "newsletter": "뉴스레터",
+    "subscribe": "구독",
+    "emailPlaceholder": "이메일을 입력하세요"
+  },
+  "meta": {
+    "defaultTitle": "기술 포트폴리오 - 풀스택 개발자",
+    "defaultDescription": "개발 프로젝트, 기술 아티클, 전문적인 여정을 탐험해보세요. 웹 개발, 모바일 앱, 클라우드 기술의 혁신적인 솔루션을 발견하세요.",
+    "keywords": "기술 포트폴리오, 풀스택 개발자, 웹 개발, 소프트웨어 엔지니어링, React, Node.js, 프로그래밍, 기술"
+  }
+} 
