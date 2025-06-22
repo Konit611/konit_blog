@@ -37,6 +37,7 @@
     "readTime": "{{time}}分で読めます",
     "readMore": "続きを読む",
     "author": "著者",
+    "authorRole": "ブログ著者",
     "showingPosts": "{{count}}件の投稿",
     "inCategory": "「{{category}}」カテゴリー",
     "paginationInfo": "{{currentPage}}/{{totalPages}}ページ • {{startIndex}}-{{endIndex}}/{{total}}件の投稿を表示"

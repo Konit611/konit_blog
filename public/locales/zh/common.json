@@ -37,6 +37,7 @@
     "readTime": "{{time}}分钟阅读",
     "readMore": "阅读更多",
     "author": "作者",
+    "authorRole": "博客作者",
     "showingPosts": "{{count}}篇文章",
     "inCategory": "在\"{{category}}\"分类中",
     "paginationInfo": "第{{currentPage}}/{{totalPages}}页 • 显示第{{startIndex}}-{{endIndex}}篇，共{{total}}篇文章"

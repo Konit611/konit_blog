@@ -51,7 +51,7 @@ export function getTranslation(
   if (params) {
     return value.replace(/\{\{(\w+)\}\}/g, (match, paramKey) => {
       const paramValue = params[paramKey];
-      return typeof paramValue === 'string' ? paramValue : match;
+      return paramValue !== undefined && paramValue !== null ? String(paramValue) : match;
     });
   }
 

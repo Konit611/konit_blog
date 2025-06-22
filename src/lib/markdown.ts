@@ -70,8 +70,10 @@ function parsePostFile(filePath: string, slug: string): Post {
   const { data, content } = matter(fileContents);
   
   // Calculate read time (rough estimate: 200 words per minute)
+  // Use frontmatter readTime if provided, otherwise calculate automatically
   const wordCount = content.split(/\s+/).length;
-  const readTime = Math.ceil(wordCount / 200);
+  const calculatedReadTime = Math.ceil(wordCount / 200);
+  const readTime = data.readTime || calculatedReadTime;
   
   return {
     slug,

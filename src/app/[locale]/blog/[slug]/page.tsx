@@ -40,6 +40,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     const { locale, slug } = await params;
     const post = getPostBySlug(slug, locale);
     const htmlContent = await markdownToHtml(post.content);
+    
+    // Simple author role mapping by locale
+    const authorRoles = {
+      ko: '블로그 작성자',
+      en: 'Blog Author',
+      zh: '博客作者',
+      ja: 'ブログ著者'
+    };
+    const authorRole = authorRoles[locale as keyof typeof authorRoles] || 'Blog Author';
 
     return (
       <Layout locale={locale}>
@@ -74,7 +83,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       {post.author || 'Travel Blogger'}
                     </div>
                     <div className="relative self-stretch font-outfit font-normal text-[#2e18139e] text-[13px] tracking-[0] leading-4 overflow-hidden text-ellipsis">
-                      Travel Writer
+                      {authorRole}
                     </div>
                   </div>
                 </div>

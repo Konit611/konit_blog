@@ -3,78 +3,78 @@ import { Category } from '../types';
 // Static categories data - this can be used on both client and server
 const CATEGORIES_DATA: Category[] = [
   {
-    id: 'adventure',
+    id: 'ios',
     name: {
-      en: 'Adventure',
-      ko: '모험',
-      zh: '冒险',
-      ja: 'アドベンチャー'
+      en: 'iOS',
+      ko: 'iOS',
+      zh: 'iOS',
+      ja: 'iOS'
     },
     description: {
-      en: 'Thrilling adventures and outdoor activities',
-      ko: '스릴 넘치는 모험과 야외 활동',
-      zh: '刺激的冒险和户外活动',
-      ja: 'スリリングな冒険とアウトドア活動'
+      en: 'iOS development',
+      ko: 'iOS 개발',
+      zh: 'iOS 开发',
+      ja: 'iOS 開発'
     }
   },
   {
-    id: 'culture',
+    id: 'ai',
     name: {
-      en: 'Culture',
-      ko: '문화',
-      zh: '文化',
-      ja: '文化'
+      en: 'AI',
+      ko: 'AI',
+      zh: 'AI',
+      ja: 'AI'
     },
     description: {
-      en: 'Local culture, traditions, and heritage',
-      ko: '현지 문화, 전통, 유산',
-      zh: '当地文化、传统和遗产',
-      ja: '地元の文化、伝統、遺産'
+      en: 'AI Development',
+      ko: 'AI 개발',
+      zh: 'AI 开发',
+      ja: 'AI 開発'
     }
   },
   {
-    id: 'food',
+    id: 'math',
     name: {
-      en: 'Food',
-      ko: '음식',
-      zh: '美食',
-      ja: '料理'
+      en: 'Math',
+      ko: '수학',
+      zh: '数学',
+      ja: '数学'
     },
     description: {
-      en: 'Local cuisine and culinary experiences',
-      ko: '현지 요리와 미식 경험',
-      zh: '当地美食和烹饪体验',
-      ja: '地元料理と料理体験'
+      en: 'Mathmatics for AI development',
+      ko: 'AI 개발을 위한 수학',
+      zh: 'AI 开发所需的数学',
+      ja: 'AI 開発に必要な数学'
     }
   },
   {
-    id: 'nature',
+    id: 'statistics',
     name: {
-      en: 'Nature',
-      ko: '자연',
-      zh: '自然',
-      ja: '自然'
+      en: 'Statistics',
+      ko: '통계',
+      zh: '统计',
+      ja: '統計'
     },
     description: {
-      en: 'Natural landscapes and wildlife',
-      ko: '자연 경관과 야생동물',
-      zh: '自然景观和野生动物',
-      ja: '自然の風景と野生動物'
+      en: 'Statistics for AI development',
+      ko: 'AI 개발을 위한 통계',
+      zh: 'AI 开发所需的统计',
+      ja: 'AI 開発に必要な統計'
     }
   },
   {
-    id: 'city',
+    id: 'infra',
     name: {
-      en: 'City',
-      ko: '도시',
-      zh: '城市',
-      ja: '都市'
+      en: 'Infrastructure',
+      ko: '인프라',
+      zh: '基础设施',
+      ja: 'インフラ'
     },
     description: {
-      en: 'Urban exploration and city life',
-      ko: '도시 탐험과 도시 생활',
-      zh: '城市探索和城市生活',
-      ja: '都市探索と都市生活'
+      en: 'Infrastructure for AI development',
+      ko: 'AI 개발을 위한 인프라',
+      zh: 'AI 开发所需的基础设施',
+      ja: 'AI 開発に必要なインフラ'
     }
   }
 ];

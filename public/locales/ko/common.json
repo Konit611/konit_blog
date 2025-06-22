@@ -37,6 +37,7 @@
     "readTime": "{{time}}분 읽기",
     "readMore": "더 읽기",
     "author": "작성자",
+    "authorRole": "블로그 작성자",
     "showingPosts": "{{count}}개 포스트",
     "inCategory": "\"{{category}}\" 카테고리",
     "paginationInfo": "{{currentPage}}/{{totalPages}} 페이지 • {{startIndex}}-{{endIndex}}/{{total}} 포스트"

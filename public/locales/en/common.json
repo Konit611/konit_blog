@@ -37,6 +37,7 @@
     "readTime": "{{time}} min read",
     "readMore": "Read More",
     "author": "Author",
+    "authorRole": "Blog Author",
     "showingPosts": "{{count}} posts",
     "inCategory": "in \"{{category}}\"",
     "paginationInfo": "Page {{currentPage}} of {{totalPages}} • Showing {{startIndex}}-{{endIndex}} of {{total}} posts"
