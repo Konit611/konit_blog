@@ -133,15 +133,36 @@ module.exports = {
     const locales = ['en', 'ko', 'zh', 'ja'];
     
     try {
-      // Add blog post paths for each locale
+      // Add blog post paths for each locale (supporting category folders)
       for (const locale of locales) {
         const postsDirectory = path.join(process.cwd(), 'data', 'posts', locale);
         
         if (fs.existsSync(postsDirectory)) {
-          const files = fs.readdirSync(postsDirectory);
-          const markdownFiles = files.filter(file => file.endsWith('.md'));
+          // Check category folders
+          const categories = ['ios', 'ai', 'math', 'statistics', 'infra'];
+          for (const category of categories) {
+            const categoryPath = path.join(postsDirectory, category);
+            if (fs.existsSync(categoryPath)) {
+              const files = fs.readdirSync(categoryPath);
+              const markdownFiles = files.filter(file => file.endsWith('.md'));
+              
+              for (const file of markdownFiles) {
+                const slug = file.replace(/\.md$/, '');
+                additionalPaths.push({
+                  loc: `/${locale}/blog/${slug}`,
+                  changefreq: 'weekly',
+                  priority: 0.8,
+                  lastmod: new Date().toISOString(),
+                });
+              }
+            }
+          }
           
-          for (const file of markdownFiles) {
+          // Also check root directory for backwards compatibility
+          const rootFiles = fs.readdirSync(postsDirectory);
+          const rootMarkdownFiles = rootFiles.filter(file => file.endsWith('.md'));
+          
+          for (const file of rootMarkdownFiles) {
             const slug = file.replace(/\.md$/, '');
             additionalPaths.push({
               loc: `/${locale}/blog/${slug}`,
