@@ -33,33 +33,76 @@ function remarkNextImage() {
 }
 
 /**
- * Get all post slugs for a specific locale
+ * Get all post slugs for a specific locale (with category folder support)
  */
 export function getPostSlugs(locale: string): string[] {
   const localeDir = path.join(postsDirectory, locale);
   if (!fs.existsSync(localeDir)) return [];
-  return fs.readdirSync(localeDir)
+  
+  const slugs: string[] = [];
+  const categoryIds = getCategoryIds();
+  
+  // Check each category folder for posts
+  for (const categoryId of categoryIds) {
+    const categoryDir = path.join(localeDir, categoryId);
+    if (fs.existsSync(categoryDir)) {
+      const files = fs.readdirSync(categoryDir);
+      files
+        .filter(file => file.endsWith('.md'))
+        .forEach(file => {
+          slugs.push(file.replace(/\.md$/, ''));
+        });
+    }
+  }
+  
+  // Also check root directory for backwards compatibility
+  const rootFiles = fs.readdirSync(localeDir);
+  rootFiles
     .filter(file => file.endsWith('.md'))
-    .map(file => file.replace(/\.md$/, ''));
+    .forEach(file => {
+      slugs.push(file.replace(/\.md$/, ''));
+    });
+  
+  return slugs;
 }
 
 /**
- * Get a single post by slug and locale
+ * Get a single post by slug and locale (with category folder support)
  */
 export function getPostBySlug(slug: string, locale: string): Post {
   const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = path.join(postsDirectory, locale, `${realSlug}.md`);
+  const localeDir = path.join(postsDirectory, locale);
   
-  if (!fs.existsSync(fullPath)) {
-    // Fallback to English if post doesn't exist in requested locale
-    const enPath = path.join(postsDirectory, 'en', `${realSlug}.md`);
-    if (fs.existsSync(enPath)) {
-      return parsePostFile(enPath, realSlug);
+  // First try to find in category folders
+  const categoryIds = getCategoryIds();
+  for (const categoryId of categoryIds) {
+    const categoryPath = path.join(localeDir, categoryId, `${realSlug}.md`);
+    if (fs.existsSync(categoryPath)) {
+      return parsePostFile(categoryPath, realSlug);
     }
-    throw new Error(`Post not found: ${slug} in ${locale} or en`);
   }
   
-  return parsePostFile(fullPath, realSlug);
+  // Then try root directory for backwards compatibility
+  const rootPath = path.join(localeDir, `${realSlug}.md`);
+  if (fs.existsSync(rootPath)) {
+    return parsePostFile(rootPath, realSlug);
+  }
+  
+  // Fallback to English if post doesn't exist in requested locale
+  const enDir = path.join(postsDirectory, 'en');
+  for (const categoryId of categoryIds) {
+    const enCategoryPath = path.join(enDir, categoryId, `${realSlug}.md`);
+    if (fs.existsSync(enCategoryPath)) {
+      return parsePostFile(enCategoryPath, realSlug);
+    }
+  }
+  
+  const enRootPath = path.join(enDir, `${realSlug}.md`);
+  if (fs.existsSync(enRootPath)) {
+    return parsePostFile(enRootPath, realSlug);
+  }
+  
+  throw new Error(`Post not found: ${slug} in ${locale} or en`);
 }
 
 /**
@@ -134,15 +177,41 @@ export function getAllPostMetadata(locale: string): PostMetadata[] {
 }
 
 /**
- * Get posts by category
+ * Get posts by category (optimized for folder structure)
  */
 export function getPostsByCategory(category: string, locale: string): Post[] {
+  const localeDir = path.join(postsDirectory, locale);
+  const categoryPath = path.join(localeDir, category.toLowerCase());
+  const posts: Post[] = [];
+  
+  // First, get posts directly from category folder
+  if (fs.existsSync(categoryPath)) {
+    const files = fs.readdirSync(categoryPath);
+    files
+      .filter(file => file.endsWith('.md'))
+      .forEach(file => {
+        const slug = file.replace(/\.md$/, '');
+        try {
+          const post = parsePostFile(path.join(categoryPath, file), slug);
+          posts.push(post);
+        } catch (error) {
+          console.warn(`Error reading post ${file}:`, error);
+        }
+      });
+  }
+  
+  // Also check all posts for those with matching categories (for backwards compatibility)
   const allPosts = getAllPosts(locale);
-  return allPosts.filter(post => 
+  const additionalPosts = allPosts.filter(post => 
     post.categories.some(cat => 
       cat.toLowerCase() === category.toLowerCase()
-    )
+    ) && !posts.some(p => p.slug === post.slug)
   );
+  
+  posts.push(...additionalPosts);
+  
+  // Sort by date (newest first)
+  return posts.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
 
 /**
