@@ -1,103 +1,15 @@
 import { Category } from '../types';
 
-// Static categories data - this can be used on both client and server
-const CATEGORIES_DATA: Category[] = [
-  {
-    id: 'ios',
-    name: {
-      en: 'iOS',
-      ko: 'iOS',
-      zh: 'iOS',
-      ja: 'iOS'
-    },
-    description: {
-      en: 'iOS development',
-      ko: 'iOS 개발',
-      zh: 'iOS 开发',
-      ja: 'iOS 開発'
-    }
-  },
-  {
-    id: 'ai',
-    name: {
-      en: 'AI',
-      ko: 'AI',
-      zh: 'AI',
-      ja: 'AI'
-    },
-    description: {
-      en: 'AI Development',
-      ko: 'AI 개발',
-      zh: 'AI 开发',
-      ja: 'AI 開発'
-    }
-  },
-  {
-    id: 'math',
-    name: {
-      en: 'Math',
-      ko: '수학',
-      zh: '数学',
-      ja: '数学'
-    },
-    description: {
-      en: 'Mathmatics for AI development',
-      ko: 'AI 개발을 위한 수학',
-      zh: 'AI 开发所需的数学',
-      ja: 'AI 開発に必要な数学'
-    }
-  },
-  {
-    id: 'statistics',
-    name: {
-      en: 'Statistics',
-      ko: '통계',
-      zh: '统计',
-      ja: '統計'
-    },
-    description: {
-      en: 'Statistics for AI development',
-      ko: 'AI 개발을 위한 통계',
-      zh: 'AI 开发所需的统计',
-      ja: 'AI 開発に必要な統計'
-    }
-  },
-  {
-    id: 'infra',
-    name: {
-      en: 'Infrastructure',
-      ko: '인프라',
-      zh: '基础设施',
-      ja: 'インフラ'
-    },
-    description: {
-      en: 'Infrastructure for AI development',
-      ko: 'AI 개발을 위한 인프라',
-      zh: 'AI 开发所需的基础设施',
-      ja: 'AI 開発に必要なインフラ'
-    }
+/**
+ * Get the localized name for a category (Client-safe version)
+ */
+export function getCategoryName(id: string, locale: string, categories?: Category[]): string {
+  if (!categories) {
+    // Return the ID as fallback if categories not provided
+    return id;
   }
-];
 
-/**
- * Get all categories (client-safe version)
- */
-export function getCategories(): Category[] {
-  return CATEGORIES_DATA;
-}
-
-/**
- * Get a specific category by its ID
- */
-export function getCategoryById(id: string): Category | undefined {
-  return CATEGORIES_DATA.find(category => category.id === id);
-}
-
-/**
- * Get the localized name for a category
- */
-export function getCategoryName(id: string, locale: string): string {
-  const category = getCategoryById(id);
+  const category = categories.find(cat => cat.id === id);
   if (!category) {
     // Return the ID as fallback if category not found
     return id;
@@ -108,10 +20,14 @@ export function getCategoryName(id: string, locale: string): string {
 }
 
 /**
- * Get the localized description for a category
+ * Get the localized description for a category (Client-safe version)
  */
-export function getCategoryDescription(id: string, locale: string): string | undefined {
-  const category = getCategoryById(id);
+export function getCategoryDescription(id: string, locale: string, categories?: Category[]): string | undefined {
+  if (!categories) {
+    return undefined;
+  }
+
+  const category = categories.find(cat => cat.id === id);
   if (!category || !category.description) {
     return undefined;
   }
@@ -120,26 +36,12 @@ export function getCategoryDescription(id: string, locale: string): string | und
 }
 
 /**
- * Check if a category exists
+ * Get categories with their localized names (Client-safe version)
  */
-export function categoryExists(id: string): boolean {
-  return getCategoryById(id) !== undefined;
-}
-
-/**
- * Get all category IDs
- */
-export function getCategoryIds(): string[] {
-  return CATEGORIES_DATA.map(category => category.id);
-}
-
-/**
- * Get categories with their localized names
- */
-export function getCategoriesWithLocalizedNames(locale: string): Array<{id: string, name: string, description?: string}> {
-  return CATEGORIES_DATA.map(category => ({
+export function getCategoriesWithLocalizedNames(locale: string, categories: Category[]): Array<{id: string, name: string, description?: string}> {
+  return categories.map(category => ({
     id: category.id,
-    name: getCategoryName(category.id, locale),
-    description: getCategoryDescription(category.id, locale)
+    name: getCategoryName(category.id, locale, categories),
+    description: getCategoryDescription(category.id, locale, categories)
   }));
 } 

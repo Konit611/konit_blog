@@ -4,7 +4,7 @@ date: 2025-06-22 16:48
 excerpt: 統計検定２級の内容_統計量
 coverImage: 
 categories:
-  - Statistics
+  - statistics
 tags:
   - Statistics
   - Grade-2

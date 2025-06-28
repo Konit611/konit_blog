@@ -1,6 +1,6 @@
 'use client';
-
 import { useState, useEffect } from 'react';
+import { Category } from '../types';
 import { getCategoriesWithLocalizedNames } from '../lib/categories';
 
 interface CategoryFilterProps {
@@ -10,6 +10,7 @@ interface CategoryFilterProps {
   className?: string;
   showAllOption?: boolean;
   allOptionText?: string;
+  categories: Category[];
 }
 
 export default function CategoryFilter({
@@ -18,22 +19,23 @@ export default function CategoryFilter({
   onCategoryChange,
   className = '',
   showAllOption = true,
-  allOptionText = 'All Posts'
+  allOptionText = 'All Posts',
+  categories: categoriesData
 }: CategoryFilterProps) {
   const [categories, setCategories] = useState<Array<{id: string, name: string, description?: string}>>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     try {
-      const categoriesData = getCategoriesWithLocalizedNames(locale);
-      setCategories(categoriesData);
+      const localizedCategories = getCategoriesWithLocalizedNames(locale, categoriesData);
+      setCategories(localizedCategories);
     } catch (error) {
       console.error('Error loading categories:', error);
       setCategories([]);
     } finally {
       setIsLoading(false);
     }
-  }, [locale]);
+  }, [locale, categoriesData]);
 
   if (isLoading) {
     const skeletonWidths = [110, 95, 120, 85, 105, 130];
@@ -94,6 +96,7 @@ interface CategoryDropdownProps {
   showAllOption?: boolean;
   allOptionText?: string;
   placeholder?: string;
+  categories: Category[];
 }
 
 export function CategoryDropdown({
@@ -103,21 +106,22 @@ export function CategoryDropdown({
   className = '',
   showAllOption = true,
   allOptionText = 'All Posts',
+  categories: categoriesData
 }: CategoryDropdownProps) {
   const [categories, setCategories] = useState<Array<{id: string, name: string, description?: string}>>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     try {
-      const categoriesData = getCategoriesWithLocalizedNames(locale);
-      setCategories(categoriesData);
+      const localizedCategories = getCategoriesWithLocalizedNames(locale, categoriesData);
+      setCategories(localizedCategories);
     } catch (error) {
       console.error('Error loading categories:', error);
       setCategories([]);
     } finally {
       setIsLoading(false);
     }
-  }, [locale]);
+  }, [locale, categoriesData]);
 
   if (isLoading) {
     return (

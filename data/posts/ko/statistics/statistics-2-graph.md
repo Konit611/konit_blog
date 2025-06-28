@@ -4,7 +4,7 @@ date: 2025-06-25 07:27
 excerpt: 통계검정 2급의 내용_그래프량
 coverImage: 
 categories:
-  - Statistics
+  - statistics
 tags:
   - Statistics
   - Grade-2

@@ -1,122 +1,77 @@
 [
   {
-    "id": "travel-tips",
+    "id": "ai",
     "name": {
-      "en": "Travel Tips",
-      "ko": "여행 팁",
-      "zh": "旅行提示",
-      "ja": "旅行のヒント"
+      "en": "AI",
+      "ko": "AI",
+      "zh": "人工智能",
+      "ja": "AI"
     },
     "description": {
-      "en": "Practical advice and tips for travelers",
-      "ko": "여행자를 위한 실용적인 조언과 팁",
-      "zh": "为旅行者提供实用建议和提示",
-      "ja": "旅行者のための実用的なアドバイスとヒント"
+      "en": "Artificial Intelligence, Machine Learning, and Deep Learning",
+      "ko": "인공지능, 머신러닝, 딥러닝",
+      "zh": "人工智能、机器学习和深度学习",
+      "ja": "人工知能、機械学習、ディープラーニング"
     }
   },
   {
-    "id": "destinations",
+    "id": "blender",
     "name": {
-      "en": "Destinations",
-      "ko": "여행지",
-      "zh": "目的地",
-      "ja": "目的地"
+      "en": "Blender",
+      "ko": "블렌더",
+      "zh": "Blender",
+      "ja": "Blender"
     },
     "description": {
-      "en": "Explore amazing places around the world",
-      "ko": "전 세계의 놀라운 장소들을 탐험해보세요",
-      "zh": "探索世界各地的精彩地方",
-      "ja": "世界中の素晴らしい場所を探索"
+      "en": "3D modeling, animation, and rendering with Blender",
+      "ko": "블렌더를 활용한 3D 모델링, 애니메이션, 렌더링",
+      "zh": "使用Blender进行3D建模、动画和渲染",
+      "ja": "Blenderを使った3Dモデリング、アニメーション、レンダリング"
     }
   },
   {
-    "id": "food",
+    "id": "statistics",
     "name": {
-      "en": "Food & Cuisine",
-      "ko": "음식 & 요리",
-      "zh": "美食与烹饪",
-      "ja": "食べ物と料理"
+      "en": "Statistics",
+      "ko": "통계학",
+      "zh": "统计学",
+      "ja": "統計学"
     },
     "description": {
-      "en": "Discover local flavors and culinary experiences",
-      "ko": "현지 맛과 요리 경험을 발견해보세요",
-      "zh": "发现当地风味和烹饪体验",
-      "ja": "地元の味と料理体験を発見"
+      "en": "Statistical analysis, data science, and mathematical concepts",
+      "ko": "통계 분석, 데이터 사이언스, 수학적 개념",
+      "zh": "统计分析、数据科学和数学概念",
+      "ja": "統計分析、データサイエンス、数学的概念"
     }
   },
   {
-    "id": "culture",
+    "id": "math",
     "name": {
-      "en": "Culture & History",
-      "ko": "문화 & 역사",
-      "zh": "文化与历史",
-      "ja": "文化と歴史"
+      "en": "Mathematics",
+      "ko": "수학",
+      "zh": "数学",
+      "ja": "数学"
     },
     "description": {
-      "en": "Learn about local traditions and historical sites",
-      "ko": "현지 전통과 역사적 장소에 대해 알아보세요",
-      "zh": "了解当地传统和历史遗迹",
-      "ja": "地元の伝統と歴史的な場所について学ぶ"
+      "en": "Mathematical concepts, algebra, calculus, and problem solving",
+      "ko": "수학적 개념, 대수학, 미적분학, 문제 해결",
+      "zh": "数学概念、代数、微积分和问题解决",
+      "ja": "数学的概念、代数、微積分、問題解決"
     }
   },
   {
-    "id": "adventure",
+    "id": "ios",
     "name": {
-      "en": "Adventure & Activities",
-      "ko": "모험 & 액티비티",
-      "zh": "冒险与活动",
-      "ja": "アドベンチャーとアクティビティ"
+      "en": "iOS Development",
+      "ko": "iOS 개발",
+      "zh": "iOS开发",
+      "ja": "iOS開発"
     },
     "description": {
-      "en": "Exciting outdoor activities and adventures",
-      "ko": "흥미진진한 야외 활동과 모험",
-      "zh": "令人兴奋的户外活动和冒险",
-      "ja": "エキサイティングなアウトドア活動と冒険"
-    }
-  },
-  {
-    "id": "accommodation",
-    "name": {
-      "en": "Accommodation",
-      "ko": "숙박",
-      "zh": "住宿",
-      "ja": "宿泊"
-    },
-    "description": {
-      "en": "Hotels, hostels, and unique places to stay",
-      "ko": "호텔, 호스텔, 그리고 독특한 숙박 장소",
-      "zh": "酒店、青年旅社和独特的住宿地点",
-      "ja": "ホテル、ホステル、ユニークな宿泊施設"
-    }
-  },
-  {
-    "id": "budget-travel",
-    "name": {
-      "en": "Budget Travel",
-      "ko": "저예산 여행",
-      "zh": "预算旅行",
-      "ja": "バジェット旅行"
-    },
-    "description": {
-      "en": "Travel smart without breaking the bank",
-      "ko": "예산을 초과하지 않고 현명하게 여행하기",
-      "zh": "在不超出预算的情况下明智旅行",
-      "ja": "予算を超えずに賢く旅行"
-    }
-  },
-  {
-    "id": "photography",
-    "name": {
-      "en": "Travel Photography",
-      "ko": "여행 사진",
-      "zh": "旅行摄影",
-      "ja": "旅行写真"
-    },
-    "description": {
-      "en": "Capture your travel memories beautifully",
-      "ko": "여행 추억을 아름답게 담아보세요",
-      "zh": "美丽地捕捉您的旅行回忆",
-      "ja": "旅行の思い出を美しく撮影"
+      "en": "iOS app development, Swift programming, and mobile technologies",
+      "ko": "iOS 앱 개발, Swift 프로그래밍, 모바일 기술",
+      "zh": "iOS应用开发、Swift编程和移动技术",
+      "ja": "iOSアプリ開発、Swiftプログラミング、モバイル技術"
     }
   }
 ] 

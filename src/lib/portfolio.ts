@@ -11,10 +11,22 @@ const portfolioDirectory = path.join(process.cwd(), 'data/portfolio');
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const { visit } = require('unist-util-visit');
 
+interface ASTNode {
+  type: string;
+  value?: string;
+  url?: string;
+  alt?: string;
+  children?: ASTNode[];
+}
+
+interface ParentNode extends ASTNode {
+  children: ASTNode[];
+}
+
 // Next.js Image를 위한 이미지 변환 플러그인
 function remarkNextImage() {
-  return (tree: unknown) => {
-    visit(tree, 'image', (node: { url?: string; alt?: string; type: string; value: string }) => {
+  return (tree: ASTNode) => {
+    visit(tree, 'image', (node: ASTNode) => {
       // 이미지 경로가 /images/로 시작하는 경우만 처리
       if (node.url && node.url.startsWith('/images/')) {
         // HTML로 변환할 때 Next.js Image 호환 속성 추가
@@ -26,6 +38,45 @@ function remarkNextImage() {
           style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0;" 
           class="portfolio-image"
         />`;
+      }
+    });
+
+    // Obsidian 스타일 이미지 문법 처리: ![[image.png|width]]
+    visit(tree, 'text', (node: ASTNode, index: number, parent: ParentNode) => {
+      if (node.value && node.value.includes('![[')) {
+        const obsidianImageRegex = /!\[\[([^|\]]+)(?:\|(\d+))?\]\]/g;
+        let match;
+        const replacements = [];
+
+        while ((match = obsidianImageRegex.exec(node.value)) !== null) {
+          const [fullMatch, imageName, width] = match;
+          const imageUrl = `/images/${imageName}`;
+          const imageWidth = width ? `width: ${width}px; max-width: 100%;` : 'width: 100%;';
+          
+          replacements.push({
+            original: fullMatch,
+            replacement: `<img 
+              src="${imageUrl}" 
+              alt="${imageName}" 
+              loading="lazy" 
+              style="${imageWidth} height: auto; border-radius: 8px; margin: 1rem 0;" 
+              class="portfolio-image"
+            />`
+          });
+        }
+
+        if (replacements.length > 0) {
+          let newValue = node.value;
+          replacements.forEach(({ original, replacement }) => {
+            newValue = newValue.replace(original, replacement);
+          });
+          
+          // HTML 노드로 변환
+          parent.children[index] = {
+            type: 'html',
+            value: newValue
+          };
+        }
       }
     });
   };

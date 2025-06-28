@@ -4,7 +4,7 @@ date: 2025-06-22 16:48
 excerpt: Statistical Test Grade 2 Content_Statistics
 coverImage: 
 categories:
-  - Statistics
+  - statistics
 tags:
   - Statistics
   - Grade-2

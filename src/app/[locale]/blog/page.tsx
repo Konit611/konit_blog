@@ -1,4 +1,5 @@
 import { getAllPostMetadata, getAllCategories } from '../../../lib/markdown';
+import { getCategories } from '../../../lib/categories.server';
 import BlogClient from './BlogClient';
 import { Metadata } from 'next';
 
@@ -106,7 +107,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
   try {
     const { locale } = await params;
     const posts = getAllPostMetadata(locale);
-    const categories = getAllCategories();
+    const categoryIds = getAllCategories();
+    const categories = getCategories();
 
     // Generate JSON-LD structured data for Blog
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
@@ -144,7 +146,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
         keywords: post.categories.concat(post.tags || [])
       })),
       numberOfPosts: posts.length,
-      about: categories.map(category => ({
+      about: categoryIds.map(category => ({
         '@type': 'Thing',
         name: category,
         description: `Technical content about ${category}`

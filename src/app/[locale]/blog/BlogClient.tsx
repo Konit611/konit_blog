@@ -2,21 +2,21 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { PostMetadata } from '@/types';
+import { PostMetadata, Category } from '@/types';
 import CategoryFilter from '@/components/CategoryFilter';
-import { getCategoryName } from '@/lib/categories';
+import { getCategoryName } from '../../../lib/categories';
 import { Layout } from '@/components/Layout';
 import { useTranslation } from '@/components/I18nProvider';
 
 interface BlogClientProps {
   posts: PostMetadata[];
-  categories: string[];
+  categories: Category[];
   locale: string;
 }
 
 const POSTS_PER_PAGE = 9; // 3x3 grid
 
-export default function BlogClient({ posts, locale }: BlogClientProps) {
+export default function BlogClient({ posts, categories, locale }: BlogClientProps) {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -98,6 +98,7 @@ export default function BlogClient({ posts, locale }: BlogClientProps) {
               onCategoryChange={handleCategoryChange}
               allOptionText={t('blog.allPosts')}
               className="mb-4"
+              categories={categories}
             />
             
             {/* Stats */}
@@ -106,13 +107,13 @@ export default function BlogClient({ posts, locale }: BlogClientProps) {
                 <>
                   {t('blog.showingPosts', { count: filteredPosts.length })}
                   {selectedCategory && (
-                    <span> {t('blog.inCategory', { category: getCategoryName(selectedCategory, locale) })}</span>
+                    <span> {t('blog.inCategory', { category: getCategoryName(selectedCategory, locale, categories) })}</span>
                   )}
                 </>
               ) : (
                 <span>
                   {selectedCategory 
-                    ? t('blog.noPostsInCategory', { category: getCategoryName(selectedCategory, locale) })
+                    ? t('blog.noPostsInCategory', { category: getCategoryName(selectedCategory, locale, categories) })
                     : t('blog.noPostsAvailable')
                   }
                 </span>
@@ -156,9 +157,9 @@ export default function BlogClient({ posts, locale }: BlogClientProps) {
                             key={category}
                             onClick={() => setSelectedCategory(category)}
                             className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full hover:bg-blue-200 transition-colors cursor-pointer"
-                            title={`Filter by ${getCategoryName(category, locale)}`}
+                            title={`Filter by ${getCategoryName(category, locale, categories)}`}
                           >
-                            {getCategoryName(category, locale)}
+                            {getCategoryName(category, locale, categories)}
                           </button>
                         ))}
                       </div>
@@ -191,7 +192,7 @@ export default function BlogClient({ posts, locale }: BlogClientProps) {
               <div className="text-center py-12">
                 <div className="text-gray-500 text-lg">
                   {selectedCategory 
-                    ? t('blog.noPostsInCategory', { category: getCategoryName(selectedCategory, locale) })
+                    ? t('blog.noPostsInCategory', { category: getCategoryName(selectedCategory, locale, categories) })
                     : t('blog.noPostsAvailable')
                   }
                 </div>

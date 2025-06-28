@@ -4,7 +4,7 @@ date: 2025-06-25 07:27
 excerpt: Statistics Test Grade 2 Content_Graph Quantities
 coverImage: 
 categories:
-  - Statistics
+  - statistics
 tags:
   - Statistics
   - Grade-2
