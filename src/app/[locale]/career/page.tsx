@@ -15,7 +15,7 @@ const translations = {
     currentPosition: "현재 직책",
     experience: "경력",
     skills: "기술 스택",
-    education: "학력",
+    education: "교육",
     certifications: "자격증",
     achievements: "주요 성과",
     workExperience: "업무 경험",
@@ -60,7 +60,7 @@ const translations = {
     currentPosition: "現在のポジション",
     experience: "経験",
     skills: "技術スキル",
-    education: "学歴",
+    education: "教育",
     certifications: "資格",
     achievements: "主な成果",
     workExperience: "業務経験",
@@ -75,89 +75,59 @@ const translations = {
 const careerData = {
   currentPosition: {
     ko: {
-      title: "시니어 풀스택 개발자",
-      company: "테크 컴퍼니",
-      period: "2022.03 - 현재",
+      title: "시스템 엔지니어",
+      company: "k-Hack",
+      period: "2023.10 - 현재",
       description: "웹 애플리케이션 개발 및 시스템 아키텍처 설계를 담당하고 있습니다."
     },
     en: {
-      title: "Senior Full Stack Developer",
-      company: "Tech Company",
-      period: "Mar 2022 - Present",
+      title: "System Engineer",
+      company: "k-Hack",
+      period: "Oct 2023 - Present",
       description: "Responsible for web application development and system architecture design."
     },
     zh: {
-      title: "高级全栈开发工程师",
-      company: "科技公司",
-      period: "2022年3月 - 至今",
+      title: "系统工程师",
+      company: "k-Hack",
+      period: "2023年10月 - 至今",
       description: "负责Web应用程序开发和系统架构设计。"
     },
     ja: {
-      title: "シニアフルスタック開発者",
-      company: "テック企業",
-      period: "2022年3月 - 現在",
+      title: "システムエンジニア",
+      company: "k-Hack",
+      period: "2023年10月 - 現在",
       description: "Webアプリケーション開発とシステムアーキテクチャ設計を担当しています。"
     }
   },
   workExperience: [
     {
       ko: {
-        title: "풀스택 개발자",
-        company: "스타트업 A",
-        period: "2020.06 - 2022.02",
-        description: "React, Node.js를 활용한 웹 서비스 개발",
-        achievements: ["MAU 10만 달성", "서비스 성능 50% 향상", "CI/CD 파이프라인 구축"]
+        title: "모바일 개발자",
+        company: "쿠시로시 공공기관 A",
+        period: "2025.07 - 현재",
+        description: "iOS 및 Android용 모바일 애플리케이션 개발을 담당하고 있습니다.",
+        achievements: ["요건 정의 및 설계", "디자인", "개발", "테스트 및 배포"]
       },
       en: {
-        title: "Full Stack Developer",
-        company: "Startup A",
-        period: "Jun 2020 - Feb 2022",
-        description: "Web service development using React and Node.js",
-        achievements: ["Achieved 100K MAU", "Improved service performance by 50%", "Built CI/CD pipeline"]
+        title: "Mobile Developer",
+        company: "Kushiro Public Institution A",
+        period: "Jul 2025 - Present",
+        description: "Responsible for developing mobile applications for iOS and Android.",
+        achievements: ["Requirement definition and design", "Design", "Development", "Testing and deployment"]
       },
       zh: {
-        title: "全栈开发工程师",
-        company: "初创公司 A",
-        period: "2020年6月 - 2022年2月",
-        description: "使用React和Node.js进行Web服务开发",
-        achievements: ["实现10万月活用户", "服务性能提升50%", "构建CI/CD流水线"]
+        title: "移动开发工程师",
+        company: "钏路市公共机构 A",
+        period: "2025年7月 - 至今",
+        description: "负责iOS和Android的移动应用开发。",
+        achievements: ["需求定义与设计", "设计", "开发", "测试与部署"]
       },
       ja: {
-        title: "フルスタック開発者",
-        company: "スタートアップ A",
-        period: "2020年6月 - 2022年2月",
-        description: "ReactとNode.jsを活用したWebサービス開発",
-        achievements: ["MAU10万達成", "サービス性能50%向上", "CI/CDパイプライン構築"]
-      }
-    },
-    {
-      ko: {
-        title: "프론트엔드 개발자",
-        company: "IT 회사 B",
-        period: "2018.03 - 2020.05",
-        description: "React 기반 사용자 인터페이스 개발",
-        achievements: ["모바일 반응형 UI 구현", "사용자 만족도 40% 향상", "코드 리뷰 문화 정착"]
-      },
-      en: {
-        title: "Frontend Developer",
-        company: "IT Company B",
-        period: "Mar 2018 - May 2020",
-        description: "React-based user interface development",
-        achievements: ["Implemented mobile responsive UI", "Improved user satisfaction by 40%", "Established code review culture"]
-      },
-      zh: {
-        title: "前端开发工程师",
-        company: "IT公司 B",
-        period: "2018年3月 - 2020年5月",
-        description: "基于React的用户界面开发",
-        achievements: ["实现移动端响应式UI", "用户满意度提升40%", "建立代码审查文化"]
-      },
-      ja: {
-        title: "フロントエンド開発者",
-        company: "IT企業 B",
-        period: "2018年3月 - 2020年5月",
-        description: "React基盤のユーザーインターフェース開発",
-        achievements: ["モバイルレスポンシブUI実装", "ユーザー満足度40%向上", "コードレビュー文化定着"]
+        title: "モバイル開発者",
+        company: "釧路市公共機関 A",
+        period: "2025年7月 - 現在",
+        description: "iOSおよびAndroid向けのモバイルアプリケーション開発を担当しています。",
+        achievements: ["要件定義と設計", "デザイン", "開発", "テストと展開"]
       }
     }
   ],
@@ -169,28 +139,28 @@ const careerData = {
   },
   education: {
     ko: {
-      degree: "컴퓨터공학 학사",
-      school: "한국대학교",
-      period: "2014 - 2018",
-      description: "소프트웨어 공학, 데이터 구조, 알고리즘 전공"
+      degree: "Apple Developer Academy 수료",
+      school: "Apple @ Pohang",
+      period: "2024 - 2025",
+      description: "iOS 및 Swift를 중심으로 한 모바일 개발 집중 교육 과정 수료"
     },
     en: {
-      degree: "Bachelor of Computer Science",
-      school: "Korea University",
-      period: "2014 - 2018",
-      description: "Major in Software Engineering, Data Structures, and Algorithms"
+      degree: "Completed Apple Developer Academy",
+      school: "Apple @ Pohang",
+      period: "2024 - 2025",
+      description: "Completed an intensive mobile development program focused on iOS and Swift"
     },
     zh: {
-      degree: "计算机科学学士",
-      school: "韩国大学",
-      period: "2014 - 2018",
-      description: "主修软件工程、数据结构和算法"
+      degree: "完成 Apple Developer Academy",
+      school: "Apple @ Pohang",
+      period: "2024 - 2025",
+      description: "完成了以iOS和Swift为中心的移动开发强化课程"
     },
     ja: {
-      degree: "コンピュータサイエンス学士",
-      school: "韓国大学",
-      period: "2014 - 2018",
-      description: "ソフトウェア工学、データ構造、アルゴリズム専攻"
+      degree: "Apple Developer Academy 修了",
+      school: "Apple @ Pohang",
+      period: "2024 - 2025",
+      description: "iOSとSwiftに焦点を当てたモバイル開発集中プログラムを修了"
     }
   }
 };
@@ -285,7 +255,7 @@ export default async function CareerPage({ params }: CareerPageProps) {
           </div>
 
           {/* Skills */}
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-blue-500 pb-2">
               {t.skills}
             </h2>
@@ -331,7 +301,7 @@ export default async function CareerPage({ params }: CareerPageProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Education */}
           <div className="mb-12">
@@ -355,7 +325,7 @@ export default async function CareerPage({ params }: CareerPageProps) {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center bg-gray-50 rounded-lg p-8">
+          {/* <div className="text-center bg-gray-50 rounded-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               {t.downloadResume}
             </h2>
@@ -363,7 +333,7 @@ export default async function CareerPage({ params }: CareerPageProps) {
               {t.contactMe}
             </p>
             <DownloadResumeButton text={t.downloadResume} />
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>

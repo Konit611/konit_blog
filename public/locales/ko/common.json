@@ -49,7 +49,7 @@
   },
   "contact": {
     "title": "연락처 - 기술 포트폴리오",
-    "description": "개발 프로젝트, 협업 기회, 또는 기술적 논의를 위해 연락주세요.",
+    "description": "무언가 재밌는 일이라면 언제든 함께 하고 싶습니다. 연락주세요.",
     "keywords": "연락처, 개발자, 기술 포트폴리오, 협업, 소프트웨어 개발",
     "heading": "연락하기",
     "subtitle": "다음 프로젝트나 협업 기회에 대해 이야기해보세요!",
@@ -57,11 +57,11 @@
       "title": "연락처 정보"
     },
     "name": "이름",
-    "bloggerName": "알렉스 첸",
+    "bloggerName": "Konit",
     "email": "이메일",
-    "emailAddress": "hello@techportfolio.com",
+    "emailAddress": "konit611@gmail.com",
     "location": "위치",
-    "locationText": "대한민국 서울",
+    "locationText": "일본 쿠시로",
     "social": "소셜 미디어",
     "twitter": "developer",
     "twitterUrl": "https://twitter.com/developer",
@@ -72,7 +72,7 @@
     "linkedin": "alexchen-dev",
     "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
     "about": "자기소개",
-    "aboutText": "안녕하세요! 저는 서울에 거주하는 열정적인 풀스택 개발자 알렉스입니다. 웹 기술, 모바일 앱, 클라우드 솔루션을 전문으로 하며 6년 이상의 소프트웨어 개발 경험을 가지고 있습니다.\n\n실제 문제를 해결하는 혁신적인 솔루션을 구축하는 것을 좋아합니다. React, Node.js, Python 및 최신 웹 기술에 대한 전문 지식을 보유하고 있습니다. 항상 새로운 기술을 배우고 개발자 커뮤니티와 지식을 공유하고자 합니다.\n\n코딩을 하지 않을 때는 새로운 기술 트렌드를 탐구하거나, 오픈소스 프로젝트에 기여하거나, 신진 개발자들을 멘토링하고 있습니다.",
+    "aboutText": "안녕하세요!\n\n저는 일본의 작은 도시 쿠시로에 거주하는 열정적인 개발자 Konit 입니다. 모바일 앱 개발을 전문으로 하며 2년 이상의 소프트웨어 개발 경험을 가지고 있습니다.\n\n단순히 코딩 뿐 아니라 유저의 문제를 해결하는 것에 흥미가 있습니다. 항상 새로운 기술을 배우고 이를 공유하고자 합니다.\n\n코딩을 하지 않을 때는 새로운 서비스에 대해 기획하는 것을 좋아합니다.",
     "languages": "프로그래밍 언어",
     "language": {
       "en": "JavaScript/TypeScript",
@@ -81,7 +81,7 @@
       "ja": "Go"
     },
     "interests": "기술 관심사",
-    "interestsList": "풀스택 개발, 클라우드 컴퓨팅, DevOps, 머신러닝, 오픈소스, 모바일 개발, 시스템 아키텍처, API 설계",
+    "interestsList": "모바일 개발, 플러터, 아키텍처, AI/ML, 수학, 생물학, 마케팅",
     "cta": {
       "title": "함께 멋진 것을 만들어봅시다!",
       "description": "프로젝트 아이디어가 있거나, 기술 컨설팅이 필요하거나, 흥미로운 협업을 원한다면 언제든 연락주세요.",

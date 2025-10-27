@@ -49,7 +49,7 @@
   },
   "contact": {
     "title": "Contact - Tech Portfolio",
-    "description": "Get in touch for development projects, collaboration opportunities, or technical discussions.",
+    "description": "If there's anything interesting, I'd love to work on it together. Feel free to reach out.",
     "keywords": "contact, developer, tech portfolio, collaboration, software development",
     "heading": "Get in Touch",
     "subtitle": "Let's discuss your next project or collaboration opportunity!",
@@ -57,11 +57,11 @@
       "title": "Contact Information"
     },
     "name": "Name",
-    "bloggerName": "Alex Chen",
+    "bloggerName": "Konit",
     "email": "Email",
-    "emailAddress": "hello@techportfolio.com",
+    "emailAddress": "konit611@gmail.com",
     "location": "Location",
-    "locationText": "Seoul, South Korea",
+    "locationText": "Kushiro, Japan",
     "social": "Social Media",
     "twitter": "developer",
     "twitterUrl": "https://twitter.com/developer",
@@ -72,7 +72,7 @@
     "linkedin": "alexchen-dev",
     "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
     "about": "About Me",
-    "aboutText": "Hi! I'm Alex, a passionate full-stack developer based in Seoul. I have over 6 years of experience in software development, specializing in web technologies, mobile apps, and cloud solutions.\n\nI love building innovative solutions that solve real-world problems. My expertise spans across React, Node.js, Python, and modern web technologies. I'm always eager to learn new technologies and share my knowledge with the developer community.\n\nWhen I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, or mentoring aspiring developers.",
+    "aboutText": "Hi!\n\nI'm Konit, a passionate developer based in Kushiro, a small city in Japan. I specialize in mobile app development with over 2 years of software development experience.\n\nI'm interested not just in coding, but in solving real user problems. I'm always eager to learn new technologies and share that knowledge.\n\nWhen I'm not coding, I enjoy planning new services.",
     "languages": "Programming Languages",
     "language": {
       "en": "JavaScript/TypeScript",
@@ -81,7 +81,7 @@
       "ja": "Go"
     },
     "interests": "Tech Interests",
-    "interestsList": "Full-Stack Development, Cloud Computing, DevOps, Machine Learning, Open Source, Mobile Development, System Architecture, API Design",
+    "interestsList": "Mobile Development, Flutter, Architecture, AI/ML, Mathematics, Biology, Marketing",
     "cta": {
       "title": "Let's Build Something Amazing!",
       "description": "Whether you have a project idea, need technical consultation, or want to collaborate on something exciting, I'd love to hear from you.",

@@ -17,7 +17,7 @@ export const HokkaidoTravel: React.FC<HokkaidoTravelProps> = ({ locale }) => {
     },
     ko: {
       hero: {
-        title: "매일 코드하고\n배워가는 기록",
+        title: "매일 코딩하고\n배워가는 기록",
         button: "글 둘러보기"
       }
     },
@@ -29,7 +29,7 @@ export const HokkaidoTravel: React.FC<HokkaidoTravelProps> = ({ locale }) => {
     },
     ja: {
       hero: {
-        title: "毎日コードして\n毎日学ぶ記録",
+        title: "毎日のコード\n毎日の学び",
         button: "記事を探索"
       }
     }

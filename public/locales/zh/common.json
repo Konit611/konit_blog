@@ -49,7 +49,7 @@
   },
   "contact": {
     "title": "联系我 - 技术作品集",
-    "description": "联系我进行开发项目、合作机会或技术讨论。",
+    "description": "如果有什么有趣的事情，我很乐意一起合作。请随时与我联系。",
     "keywords": "联系, 开发者, 技术作品集, 合作, 软件开发",
     "heading": "联系我",
     "subtitle": "让我们讨论您的下一个项目或合作机会！",
@@ -57,11 +57,11 @@
       "title": "联系信息"
     },
     "name": "姓名",
-    "bloggerName": "陈亚历克斯",
+    "bloggerName": "Konit",
     "email": "邮箱",
-    "emailAddress": "hello@techportfolio.com",
+    "emailAddress": "konit611@gmail.com",
     "location": "位置",
-    "locationText": "韩国首尔",
+    "locationText": "日本钏路",
     "social": "社交媒体",
     "twitter": "developer",
     "twitterUrl": "https://twitter.com/developer",
@@ -72,7 +72,7 @@
     "linkedin": "alexchen-dev",
     "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
     "about": "关于我",
-    "aboutText": "您好！我是亚历克斯，一位居住在首尔的热情全栈开发者。我在软件开发方面有6年以上的经验，专注于Web技术、移动应用和云解决方案。\n\n我喜欢构建解决实际问题的创新解决方案。我的专业技能涵盖React、Node.js、Python和现代Web技术。我总是渴望学习新技术并与开发者社区分享我的知识。\n\n当我不在编程时，您可以发现我在探索新的技术趋势、为开源项目做贡献，或指导有抱负的开发者。",
+    "aboutText": "你好！\n\n我是Konit，一位居住在日本小城市钏路的热情开发者。我专注于移动应用开发，拥有2年以上的软件开发经验。\n\n我不仅对编程感兴趣，更关注解决真实用户的问题。我一直热衷于学习新技术并分享这些知识。\n\n当我不在编程时，我喜欢规划新的服务。",
     "languages": "编程语言",
     "language": {
       "en": "JavaScript/TypeScript",
@@ -81,7 +81,7 @@
       "ja": "Go"
     },
     "interests": "技术兴趣",
-    "interestsList": "全栈开发、云计算、DevOps、机器学习、开源、移动开发、系统架构、API设计",
+    "interestsList": "移动开发、Flutter、架构、AI/ML、数学、生物学、营销",
     "cta": {
       "title": "让我们一起创建令人惊叹的东西！",
       "description": "无论您有项目想法、需要技术咨询，还是想要合作做一些令人兴奋的事情，我都很乐意听到您的想法。",
