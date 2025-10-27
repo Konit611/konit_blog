@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from '../../../components/Layout';
-import { DownloadResumeButton } from '../../../components/DownloadResumeButton';
+// import { DownloadResumeButton } from '../../../components/DownloadResumeButton';
 
 interface CareerPageProps {
   params: Promise<{
