@@ -154,17 +154,6 @@ coverImage: "/images/cover.jpg"
 }
 ```
 
-## 배포
-
-Vercel을 사용한 배포가 권장됩니다:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-
-자세한 배포 방법은 [Next.js 배포 문서](https://nextjs.org/docs/app/building-your-application/deploying)를 참조하세요.
-
 ## 라이선스
 
 MIT License
-# konit_blog
-# konit_blog
-# konit_blog
