@@ -73,5 +73,20 @@
       "zh": "iOS应用开发、Swift编程和移动技术",
       "ja": "iOSアプリ開発、Swiftプログラミング、モバイル技術"
     }
+  },
+  {
+    "id": "algorithm",
+    "name": {
+      "en": "Algorithm",
+      "ko": "알고리즘",
+      "zh": "算法",
+      "ja": "アルゴリズム"
+    },
+    "description": {
+      "en": "Data structures, algorithms, and problem-solving techniques",
+      "ko": "자료구조, 알고리즘, 문제 해결 기법",
+      "zh": "数据结构、算法和问题解决技巧",
+      "ja": "データ構造、アルゴリズム、問題解決技法"
+    }
   }
 ] 
