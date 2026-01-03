@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from '../../../components/Layout';
+import Layout from '../../../components/layout/Layout';
 // import { DownloadResumeButton } from '../../../components/DownloadResumeButton';
 
 interface CareerPageProps {
@@ -164,6 +164,44 @@ const careerData = {
     }
   }
 };
+
+export async function generateMetadata({ params }: CareerPageProps): Promise<import('next').Metadata> {
+  const { locale } = await params;
+  
+  const translations = {
+    en: {
+      title: "Career - Professional Experience",
+      description: "My professional journey and experience in software development",
+      keywords: "career, software developer, professional experience, work history"
+    },
+    ko: {
+      title: "경력 - 전문적인 경험",
+      description: "소프트웨어 개발 분야에서의 전문적인 여정과 경험을 소개합니다",
+      keywords: "경력, 소프트웨어 개발자, 전문 경험, 업무 이력"
+    },
+    zh: {
+      title: "职业经历 - 专业经验",
+      description: "我在软件开发领域的专业历程和经验",
+      keywords: "职业经历, 软件开发者, 专业经验, 工作履历"
+    },
+    ja: {
+      title: "キャリア - 専門的な経験",
+      description: "ソフトウェア開発分野での専門的な歩みと経験をご紹介します",
+      keywords: "キャリア, ソフトウェア開発者, 専門経験, 業務経歴"
+    }
+  };
+
+  const t = translations[locale as keyof typeof translations] || translations.en;
+
+  return {
+    title: t.title,
+    description: t.description,
+    keywords: t.keywords,
+    icons: {
+      icon: '/favicon.ico',
+    },
+  };
+}
 
 export function generateStaticParams() {
   return [

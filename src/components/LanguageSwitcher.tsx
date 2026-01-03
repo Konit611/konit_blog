@@ -16,9 +16,9 @@ interface Language {
 
 const languages: Language[] = [
   { code: 'ko', name: 'Korean', flag: '🇰🇷', nativeName: '한국어' },
+  { code: 'ja', name: 'Japanese', flag: '🇯🇵', nativeName: '日本語' },
   { code: 'en', name: 'English', flag: '🇺🇸', nativeName: 'English' },
   { code: 'zh', name: 'Chinese', flag: '🇨🇳', nativeName: '中文' },
-  { code: 'ja', name: 'Japanese', flag: '🇯🇵', nativeName: '日本語' }
 ];
 
 export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ currentLocale }) => {

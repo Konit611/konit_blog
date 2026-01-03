@@ -1,40 +1,27 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Hepta_Slab, Libre_Franklin, Domine, Outfit } from 'next/font/google';
+import localFont from "next/font/local";
 import './globals.css';
 import { siteConfig } from '@/lib/seo';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const notoSerifDisplay = localFont({
+  src: "../../public/fonts/NotoSerifDisplay-Variable.woff2",
+  variable: "--font-noto-serif-display",
+  weight: "100 900",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const notoSansDisplay = localFont({
+  src: "../../public/fonts/NotoSansDisplay-Variable.woff2",
+  variable: "--font-noto-sans-display",
+  weight: "100 900",
+  display: "swap",
 });
 
-const heptaSlab = Hepta_Slab({
-  variable: '--font-hepta-slab',
-  subsets: ['latin'],
-  weight: ['800'],
-});
-
-const libreFranklin = Libre_Franklin({
-  variable: '--font-libre-franklin',
-  subsets: ['latin'],
-  weight: ['500', '600'],
-});
-
-const domine = Domine({
-  variable: '--font-domine',
-  subsets: ['latin'],
-  weight: ['700'],
-});
-
-const outfit = Outfit({
-  variable: '--font-outfit',
-  subsets: ['latin'],
-  weight: ['500'],
+const notoSansJP = localFont({
+  src: "../../public/fonts/NotoSansJP-Variable.woff2",
+  variable: "--font-noto-sans-jp",
+  weight: "100 900",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -71,8 +58,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
 };
@@ -85,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${heptaSlab.variable} ${libreFranklin.variable} ${domine.variable} ${outfit.variable} antialiased`}
+        className={`${notoSansJP.variable} ${notoSerifDisplay.variable} ${notoSansDisplay.variable}`}
       >
         {children}
       </body>

@@ -65,12 +65,12 @@
     "social": "社交媒体",
     "twitter": "developer",
     "twitterUrl": "https://twitter.com/developer",
-    "instagram": "alexdev",
-    "instagramUrl": "https://instagram.com/alexdev",
-    "github": "alexchen",
-    "githubUrl": "https://github.com/alexchen",
-    "linkedin": "alexchen-dev",
-    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
+    "instagram": "konit611",
+    "instagramUrl": "https://instagram.com/konit611",
+    "github": "konit611",
+    "githubUrl": "https://github.com/konit611",
+    "linkedin": "konit611",
+    "linkedinUrl": "https://linkedin.com/in/konit611",
     "about": "关于我",
     "aboutText": "你好！\n\n我是Konit，一位居住在日本小城市钏路的热情开发者。我专注于移动应用开发，拥有2年以上的软件开发经验。\n\n我不仅对编程感兴趣，更关注解决真实用户的问题。我一直热衷于学习新技术并分享这些知识。\n\n当我不在编程时，我喜欢规划新的服务。",
     "languages": "编程语言",
@@ -105,5 +105,45 @@
     "defaultTitle": "技术作品集 - 全栈开发者",
     "defaultDescription": "探索我的开发项目、技术文章和职业历程。发现Web开发、移动应用和云技术的创新解决方案。",
     "keywords": "技术作品集, 全栈开发者, Web开发, 软件工程, React, Node.js, 编程, 技术"
+  },
+  "header": {
+    "brand": "KONIT"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "创造价值的创作者"
+    },
+    "value": {
+      "title": "从问题\n到价值",
+      "description": "我们从问题中创造价值，而不是仅仅成为一个开发者。"
+    }
+  },
+  "career": {
+    "title": "职业经历",
+    "subtitle": "我在软件开发领域的专业历程和经验",
+    "currentPosition": "当前职位",
+    "experience": "经验",
+    "skills": "技术技能",
+    "education": "教育背景",
+    "certifications": "认证证书",
+    "achievements": "主要成就",
+    "workExperience": "工作经验",
+    "present": "至今",
+    "years": "年",
+    "downloadResume": "下载简历",
+    "contactMe": "联系我"
+  },
+  "portfolio": {
+    "title": "作品集",
+    "subtitle": "展示我最近的工作和项目",
+    "viewProject": "查看项目",
+    "viewCode": "查看代码",
+    "viewDetails": "查看详情",
+    "technologies": "使用技术",
+    "workTogether": "想要一起合作吗？",
+    "workDescription": "让我们谈论新项目或合作机会。",
+    "getInTouch": "联系我",
+    "noProjects": "暂无作品集项目。",
+    "showingProjects": "显示 {count} 个项目"
   }
 } 

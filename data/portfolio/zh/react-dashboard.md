@@ -8,6 +8,9 @@ githubUrl: "https://github.com/username/react-dashboard"
 order: 2
 featured: false
 date: "2023-12-10"
+relatedPosts:
+  - "ios-swiftui-properties"
+  - "blender-day1-postit"
 ---
 
 # 基于React的管理仪表板

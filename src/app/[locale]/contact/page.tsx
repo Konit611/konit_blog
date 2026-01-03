@@ -89,6 +89,9 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
         'max-snippet': -1,
       },
     },
+    icons: {
+      icon: '/favicon.ico',
+    },
   };
 }
 

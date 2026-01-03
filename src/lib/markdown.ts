@@ -5,7 +5,8 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import gfm from 'remark-gfm';
 import { Post, PostMetadata } from '../types';
-import { getCategoryIds } from './categories.server';
+import { getCategories } from './categories.server';
+import { PARENT_CATEGORY_IDS } from '@/constants/categories';
 
 const postsDirectory = path.join(process.cwd(), 'data/posts');
 
@@ -84,20 +85,28 @@ function remarkNextImage() {
 }
 
 /**
- * Get all post slugs for a specific locale (with category folder support)
+ * Get all post slugs for a specific locale (with parent/child category folder support)
  */
 export function getPostSlugs(locale: string): string[] {
   const localeDir = path.join(postsDirectory, locale);
   if (!fs.existsSync(localeDir)) return [];
   
   const slugs: string[] = [];
-  const categoryIds = getCategoryIds();
+  const categories = getCategories();
   
-  // Check each category folder for posts
-  for (const categoryId of categoryIds) {
-    const categoryDir = path.join(localeDir, categoryId);
-    if (fs.existsSync(categoryDir)) {
-      const files = fs.readdirSync(categoryDir);
+  // Check parent category → child category structure
+  for (const parentId of PARENT_CATEGORY_IDS) {
+    const parentDir = path.join(localeDir, parentId);
+    if (!fs.existsSync(parentDir)) continue;
+    
+    // Get child categories for this parent
+    const childCategories = categories.filter(cat => cat.parentId === parentId);
+    
+    for (const child of childCategories) {
+      const childDir = path.join(parentDir, child.id);
+      if (!fs.existsSync(childDir) || !fs.statSync(childDir).isDirectory()) continue;
+      
+      const files = fs.readdirSync(childDir);
       files
         .filter(file => file.endsWith('.md'))
         .forEach(file => {
@@ -106,51 +115,40 @@ export function getPostSlugs(locale: string): string[] {
     }
   }
   
-  // Also check root directory for backwards compatibility
-  const rootFiles = fs.readdirSync(localeDir);
-  rootFiles
-    .filter(file => file.endsWith('.md'))
-    .forEach(file => {
-      slugs.push(file.replace(/\.md$/, ''));
-    });
-  
   return slugs;
 }
 
 /**
- * Get a single post by slug and locale (with category folder support)
+ * Get a single post by slug and locale (with parent/child category folder support)
  */
 export function getPostBySlug(slug: string, locale: string): Post {
   const realSlug = slug.replace(/\.md$/, '');
   const localeDir = path.join(postsDirectory, locale);
+  const categories = getCategories();
   
-  // First try to find in category folders
-  const categoryIds = getCategoryIds();
-  for (const categoryId of categoryIds) {
-    const categoryPath = path.join(localeDir, categoryId, `${realSlug}.md`);
-    if (fs.existsSync(categoryPath)) {
-      return parsePostFile(categoryPath, realSlug);
+  // Search in parent → child category structure
+  for (const parentId of PARENT_CATEGORY_IDS) {
+    const childCategories = categories.filter(cat => cat.parentId === parentId);
+    
+    for (const child of childCategories) {
+      const postPath = path.join(localeDir, parentId, child.id, `${realSlug}.md`);
+      if (fs.existsSync(postPath)) {
+        return parsePostFile(postPath, realSlug);
+      }
     }
-  }
-  
-  // Then try root directory for backwards compatibility
-  const rootPath = path.join(localeDir, `${realSlug}.md`);
-  if (fs.existsSync(rootPath)) {
-    return parsePostFile(rootPath, realSlug);
   }
   
   // Fallback to English if post doesn't exist in requested locale
   const enDir = path.join(postsDirectory, 'en');
-  for (const categoryId of categoryIds) {
-    const enCategoryPath = path.join(enDir, categoryId, `${realSlug}.md`);
-    if (fs.existsSync(enCategoryPath)) {
-      return parsePostFile(enCategoryPath, realSlug);
+  for (const parentId of PARENT_CATEGORY_IDS) {
+    const childCategories = categories.filter(cat => cat.parentId === parentId);
+    
+    for (const child of childCategories) {
+      const enPostPath = path.join(enDir, parentId, child.id, `${realSlug}.md`);
+      if (fs.existsSync(enPostPath)) {
+        return parsePostFile(enPostPath, realSlug);
+      }
     }
-  }
-  
-  const enRootPath = path.join(enDir, `${realSlug}.md`);
-  if (fs.existsSync(enRootPath)) {
-    return parsePostFile(enRootPath, realSlug);
   }
   
   throw new Error(`Post not found: ${slug} in ${locale} or en`);
@@ -228,14 +226,24 @@ export function getAllPostMetadata(locale: string): PostMetadata[] {
 }
 
 /**
- * Get posts by category (optimized for folder structure)
+ * Get posts by category (optimized for parent/child folder structure)
  */
 export function getPostsByCategory(category: string, locale: string): Post[] {
   const localeDir = path.join(postsDirectory, locale);
-  const categoryPath = path.join(localeDir, category.toLowerCase());
   const posts: Post[] = [];
+  const categories = getCategories();
   
-  // First, get posts directly from category folder
+  // Find which parent this category belongs to
+  const categoryData = categories.find(cat => cat.id.toLowerCase() === category.toLowerCase());
+  
+  if (!categoryData) {
+    return posts;
+  }
+  
+  const parentId = categoryData.parentId;
+  const categoryPath = path.join(localeDir, parentId, category.toLowerCase());
+  
+  // Get posts from category folder
   if (fs.existsSync(categoryPath)) {
     const files = fs.readdirSync(categoryPath);
     files
@@ -251,16 +259,6 @@ export function getPostsByCategory(category: string, locale: string): Post[] {
       });
   }
   
-  // Also check all posts for those with matching categories (for backwards compatibility)
-  const allPosts = getAllPosts(locale);
-  const additionalPosts = allPosts.filter(post => 
-    post.categories.some(cat => 
-      cat.toLowerCase() === category.toLowerCase()
-    ) && !posts.some(p => p.slug === post.slug)
-  );
-  
-  posts.push(...additionalPosts);
-  
   // Sort by date (newest first)
   return posts.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }
@@ -269,8 +267,9 @@ export function getPostsByCategory(category: string, locale: string): Post[] {
  * Get all unique categories from all posts
  */
 export function getAllCategories(): string[] {
-  // Return predefined categories from categories.ts
-  return getCategoryIds();
+  // Return predefined categories
+  const categories = getCategories();
+  return categories.map(cat => cat.id);
 }
 
 /**

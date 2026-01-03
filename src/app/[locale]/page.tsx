@@ -37,15 +37,15 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   };
 
   const t = translations[locale as keyof typeof translations] || translations.en;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://travelblog.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit.studio';
 
   return {
     title: t.title,
     description: t.description,
     keywords: t.keywords,
-    authors: [{ name: 'Alex Chen' }],
-    creator: 'Alex Chen',
-    publisher: 'Tech Blog',
+    authors: [{ name: 'Konit' }],
+    creator: 'Konit',
+    publisher: 'KONIT Studio',
     robots: {
       index: true,
       follow: true,
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       title: t.title,
       description: t.description,
       url: `/${locale}`,
-      siteName: 'Tech Blog',
+      siteName: 'KONIT Studio',
       locale: locale,
       type: 'website',
       images: [
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     },
     twitter: {
       card: 'summary_large_image',
-      creator: '@developer',
+      creator: '@konit611',
       title: t.title,
       description: t.description,
       images: ['/images/og-home.jpg'],

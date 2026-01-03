@@ -1,79 +1,26 @@
-// 기본 타입 정의
-export interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  coverImage: string;
-  categories: string[];
-  content: string;
-  author?: string;
-  tags?: string[];
-  readTime?: number;
-}
+/**
+ * Types Index
+ * Re-exports all types from subdirectories
+ */
 
-export interface PostMetadata {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  coverImage: string;
-  categories: string[];
-  author?: string;
-  tags?: string[];
-  readTime?: number;
-}
+// Post types
+export type { Post, PostMetadata } from './post.types';
 
-export interface Category {
-  id: string;
-  name: Record<string, string>;
-  description?: Record<string, string>;
-}
+// Category types
+export type { ParentCategory, Category } from './category.types';
 
-export interface Locale {
-  [key: string]: string;
-}
+// Portfolio types
+export type { Portfolio, PortfolioMetadata } from './portfolio.types';
 
-export interface LocaleData {
-  [key: string]: string;
-}
+// I18n types
+export type { Locale, LocaleData, Translations, LocalizedString } from './i18n.types';
 
-export type SupportedLocale = 'ko' | 'en' | 'zh' | 'ja';
-
-export interface LayoutProps {
-  children: React.ReactNode;
-  locale: SupportedLocale;
-}
-
-export interface NavigationItem {
-  href: string;
-  label: string;
-  external?: boolean;
-}
-
-export interface Portfolio {
-  slug: string;
-  title: string;
-  description: string;
-  coverImage: string;
-  tech: string[];
-  projectUrl?: string;
-  githubUrl?: string;
-  content: string;
-  order?: number;
-  featured?: boolean;
-  date: string;
-}
-
-export interface PortfolioMetadata {
-  slug: string;
-  title: string;
-  description: string;
-  coverImage: string;
-  tech: string[];
-  projectUrl?: string;
-  githubUrl?: string;
-  order?: number;
-  featured?: boolean;
-  date: string;
-}
+// Common types
+export type {
+  SupportedLocale,
+  LayoutProps,
+  NavigationItem,
+  PageProps,
+  MetadataConfig,
+  PaginationResult,
+} from './common.types';

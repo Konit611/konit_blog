@@ -1,36 +1,7 @@
 [
   {
-    "id": "ai",
-    "name": {
-      "en": "AI",
-      "ko": "AI",
-      "zh": "人工智能",
-      "ja": "AI"
-    },
-    "description": {
-      "en": "Artificial Intelligence, Machine Learning, and Deep Learning",
-      "ko": "인공지능, 머신러닝, 딥러닝",
-      "zh": "人工智能、机器学习和深度学习",
-      "ja": "人工知能、機械学習、ディープラーニング"
-    }
-  },
-  {
-    "id": "blender",
-    "name": {
-      "en": "Blender",
-      "ko": "블렌더",
-      "zh": "Blender",
-      "ja": "Blender"
-    },
-    "description": {
-      "en": "3D modeling, animation, and rendering with Blender",
-      "ko": "블렌더를 활용한 3D 모델링, 애니메이션, 렌더링",
-      "zh": "使用Blender进行3D建模、动画和渲染",
-      "ja": "Blenderを使った3Dモデリング、アニメーション、レンダリング"
-    }
-  },
-  {
     "id": "statistics",
+    "parentId": "planning",
     "name": {
       "en": "Statistics",
       "ko": "통계학",
@@ -46,6 +17,7 @@
   },
   {
     "id": "math",
+    "parentId": "planning",
     "name": {
       "en": "Mathematics",
       "ko": "수학",
@@ -60,7 +32,24 @@
     }
   },
   {
+    "id": "blender",
+    "parentId": "design",
+    "name": {
+      "en": "Blender",
+      "ko": "블렌더",
+      "zh": "Blender",
+      "ja": "Blender"
+    },
+    "description": {
+      "en": "3D modeling, animation, and rendering with Blender",
+      "ko": "블렌더를 활용한 3D 모델링, 애니메이션, 렌더링",
+      "zh": "使用Blender进行3D建模、动画和渲染",
+      "ja": "Blenderを使った3Dモデリング、アニメーション、レンダリング"
+    }
+  },
+  {
     "id": "ios",
+    "parentId": "development",
     "name": {
       "en": "iOS Development",
       "ko": "iOS 개발",
@@ -76,6 +65,7 @@
   },
   {
     "id": "algorithm",
+    "parentId": "development",
     "name": {
       "en": "Algorithm",
       "ko": "알고리즘",
@@ -87,6 +77,22 @@
       "ko": "자료구조, 알고리즘, 문제 해결 기법",
       "zh": "数据结构、算法和问题解决技巧",
       "ja": "データ構造、アルゴリズム、問題解決技法"
+    }
+  },
+  {
+    "id": "ai",
+    "parentId": "development",
+    "name": {
+      "en": "AI",
+      "ko": "AI",
+      "zh": "人工智能",
+      "ja": "AI"
+    },
+    "description": {
+      "en": "Artificial Intelligence, Machine Learning, and Deep Learning",
+      "ko": "인공지능, 머신러닝, 딥러닝",
+      "zh": "人工智能、机器学习和深度学习",
+      "ja": "人工知能、機械学習、ディープラーニング"
     }
   }
 ] 

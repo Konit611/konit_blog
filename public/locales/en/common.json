@@ -65,12 +65,12 @@
     "social": "Social Media",
     "twitter": "developer",
     "twitterUrl": "https://twitter.com/developer",
-    "instagram": "alexdev",
-    "instagramUrl": "https://instagram.com/alexdev",
-    "github": "alexchen",
-    "githubUrl": "https://github.com/alexchen",
-    "linkedin": "alexchen-dev",
-    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
+    "instagram": "konit611",
+    "instagramUrl": "https://instagram.com/konit611",
+    "github": "konit611",
+    "githubUrl": "https://github.com/konit611",
+    "linkedin": "konit611",
+    "linkedinUrl": "https://linkedin.com/in/konit611",
     "about": "About Me",
     "aboutText": "Hi!\n\nI'm Konit, a passionate developer based in Kushiro, a small city in Japan. I specialize in mobile app development with over 2 years of software development experience.\n\nI'm interested not just in coding, but in solving real user problems. I'm always eager to learn new technologies and share that knowledge.\n\nWhen I'm not coding, I enjoy planning new services.",
     "languages": "Programming Languages",
@@ -105,5 +105,45 @@
     "defaultTitle": "Tech Portfolio - Full Stack Developer",
     "defaultDescription": "Explore my development projects, technical articles, and professional journey. Discover innovative solutions in web development, mobile apps, and cloud technologies.",
     "keywords": "tech portfolio, full stack developer, web development, software engineering, React, Node.js, programming, technology"
+  },
+  "header": {
+    "brand": "KONIT"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Creator of Value"
+    },
+    "value": {
+      "title": "From Problem\nTo Value",
+      "description": "We create value from problems, not just a developer."
+    }
+  },
+  "career": {
+    "title": "Career",
+    "subtitle": "My professional journey and experience in software development",
+    "currentPosition": "Current Position",
+    "experience": "Experience",
+    "skills": "Technical Skills",
+    "education": "Education",
+    "certifications": "Certifications",
+    "achievements": "Key Achievements",
+    "workExperience": "Work Experience",
+    "present": "Present",
+    "years": "years",
+    "downloadResume": "Download Resume",
+    "contactMe": "Contact Me"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Showcasing my recent work and projects",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "viewDetails": "View Details",
+    "technologies": "Technologies",
+    "workTogether": "Want to work together?",
+    "workDescription": "Let's discuss new projects or collaboration opportunities.",
+    "getInTouch": "Get in Touch",
+    "noProjects": "No portfolio items available.",
+    "showingProjects": "Showing {count} projects"
   }
 } 

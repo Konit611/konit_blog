@@ -65,12 +65,12 @@
     "social": "소셜 미디어",
     "twitter": "developer",
     "twitterUrl": "https://twitter.com/developer",
-    "instagram": "alexdev",
-    "instagramUrl": "https://instagram.com/alexdev",
-    "github": "alexchen",
-    "githubUrl": "https://github.com/alexchen",
-    "linkedin": "alexchen-dev",
-    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
+    "instagram": "konit611",
+    "instagramUrl": "https://instagram.com/konit611",
+    "github": "konit611",
+    "githubUrl": "https://github.com/konit611",
+    "linkedin": "konit611",
+    "linkedinUrl": "https://linkedin.com/in/konit611",
     "about": "자기소개",
     "aboutText": "안녕하세요!\n\n저는 일본의 작은 도시 쿠시로에 거주하는 열정적인 개발자 Konit 입니다. 모바일 앱 개발을 전문으로 하며 2년 이상의 소프트웨어 개발 경험을 가지고 있습니다.\n\n단순히 코딩 뿐 아니라 유저의 문제를 해결하는 것에 흥미가 있습니다. 항상 새로운 기술을 배우고 이를 공유하고자 합니다.\n\n코딩을 하지 않을 때는 새로운 서비스에 대해 기획하는 것을 좋아합니다.",
     "languages": "프로그래밍 언어",
@@ -105,5 +105,45 @@
     "defaultTitle": "기술 포트폴리오 - 풀스택 개발자",
     "defaultDescription": "개발 프로젝트, 기술 아티클, 전문적인 여정을 탐험해보세요. 웹 개발, 모바일 앱, 클라우드 기술의 혁신적인 솔루션을 발견하세요.",
     "keywords": "기술 포트폴리오, 풀스택 개발자, 웹 개발, 소프트웨어 엔지니어링, React, Node.js, 프로그래밍, 기술"
+  },
+  "header": {
+    "brand": "KONIT"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "가치를 창조하는 제작자"
+    },
+    "value": {
+      "title": "문제에서\n가치로",
+      "description": "단순한 개발자가 아닌 가치를 만들기 위해 노력합니다."
+    }
+  },
+  "career": {
+    "title": "경력",
+    "subtitle": "소프트웨어 개발 분야에서의 전문적인 여정과 경험을 소개합니다",
+    "currentPosition": "현재 직책",
+    "experience": "경력",
+    "skills": "기술 스택",
+    "education": "교육",
+    "certifications": "자격증",
+    "achievements": "주요 성과",
+    "workExperience": "업무 경험",
+    "present": "현재",
+    "years": "년",
+    "downloadResume": "이력서 다운로드",
+    "contactMe": "연락하기"
+  },
+  "portfolio": {
+    "title": "포트폴리오",
+    "subtitle": "제가 작업한 프로젝트들을 소개합니다",
+    "viewProject": "프로젝트 보기",
+    "viewCode": "코드 보기",
+    "viewDetails": "자세히 보기",
+    "technologies": "사용 기술",
+    "workTogether": "함께 작업하고 싶으신가요?",
+    "workDescription": "새로운 프로젝트나 협업 기회에 대해 이야기해보세요.",
+    "getInTouch": "연락하기",
+    "noProjects": "포트폴리오 항목이 없습니다.",
+    "showingProjects": "프로젝트 {count}개"
   }
 } 

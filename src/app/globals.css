@@ -1,19 +1,16 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
+  --background: #F2EAE8;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-hepta-slab: var(--font-hepta-slab);
-  --font-libre-franklin: var(--font-libre-franklin);
-  --font-domine: var(--font-domine);
-  --font-outfit: var(--font-outfit);
+  --font-sans: var(--font-noto-sans-display);
+  --font-serif: var(--font-noto-serif-display);
+  --font-jp: var(--font-noto-sans-jp);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,31 +23,27 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+  font-family: var(--font-noto-sans-display), var(--font-noto-sans-jp), sans-serif;
 }
 
 /* Custom font classes */
-.font-hepta-slab {
-  font-family: var(--font-hepta-slab), serif;
+.font-noto-serif {
+  font-family: var(--font-noto-serif-display), serif;
 }
 
-.font-libre-franklin {
-  font-family: var(--font-libre-franklin), sans-serif;
+.font-noto-sans {
+  font-family: var(--font-noto-sans-display), sans-serif;
 }
 
-.font-domine {
-  font-family: var(--font-domine), serif;
-}
-
-.font-outfit {
-  font-family: var(--font-outfit), sans-serif;
+.font-noto-jp {
+  font-family: var(--font-noto-sans-jp), sans-serif;
 }
 
 /* 마크다운 콘텐츠 스타일링 - 높은 우선순위 */
 .markdown-content {
-  font-family: var(--font-outfit), Arial, Helvetica, sans-serif !important;
+  font-family: var(--font-noto-sans-display), var(--font-noto-sans-jp), sans-serif !important;
   color: #271c1a !important;
-  line-height: 1.6 !important;
+  line-height: 1.75 !important;
 }
 
 .markdown-content h1,
@@ -59,45 +52,80 @@ body {
 .markdown-content h4,
 .markdown-content h5,
 .markdown-content h6 {
-  font-family: var(--font-domine), serif !important;
+  font-family: var(--font-noto-serif-display), serif !important;
   font-weight: 700 !important;
   color: #271c1a !important;
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
 }
 
+/* 모바일 최적화 폰트 사이즈 */
 .markdown-content h1 {
-  font-size: 2rem !important;
-  line-height: 2.5rem !important;
-  letter-spacing: -0.025em !important;
-}
-
-.markdown-content h2 {
-  font-size: 1.75rem !important;
-  line-height: 2.25rem !important;
-  letter-spacing: -0.025em !important;
-}
-
-.markdown-content h3 {
   font-size: 1.5rem !important;
   line-height: 2rem !important;
   letter-spacing: -0.025em !important;
 }
 
-.markdown-content p {
-  font-size: 1.125rem !important;
+.markdown-content h2 {
+  font-size: 1.375rem !important;
+  line-height: 1.875rem !important;
+  letter-spacing: -0.025em !important;
+}
+
+.markdown-content h3 {
+  font-size: 1.25rem !important;
   line-height: 1.75rem !important;
-  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.025em !important;
+}
+
+.markdown-content p {
+  font-size: 1rem !important;
+  line-height: 1.75rem !important;
+  margin-bottom: 1.25rem !important;
   color: #271c1a !important;
+}
+
+/* 데스크톱에서 폰트 사이즈 증가 */
+@media (min-width: 768px) {
+  .markdown-content h1 {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .markdown-content h2 {
+    font-size: 1.75rem !important;
+    line-height: 2.25rem !important;
+  }
+
+  .markdown-content h3 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .markdown-content p {
+    font-size: 1.125rem !important;
+    line-height: 1.875rem !important;
+    margin-bottom: 1.5rem !important;
+  }
 }
 
 .markdown-content ul,
 .markdown-content ol {
-  font-size: 1.125rem !important;
+  font-size: 1rem !important;
   line-height: 1.75rem !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
   padding-left: 1.5rem !important;
   color: #271c1a !important;
+}
+
+@media (min-width: 768px) {
+  .markdown-content ul,
+  .markdown-content ol {
+    font-size: 1.125rem !important;
+    margin-bottom: 1.5rem !important;
+  }
 }
 
 .markdown-content ul {

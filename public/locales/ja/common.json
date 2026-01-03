@@ -65,12 +65,12 @@
     "social": "ソーシャルメディア",
     "twitter": "developer",
     "twitterUrl": "https://twitter.com/developer",
-    "instagram": "alexdev",
-    "instagramUrl": "https://instagram.com/alexdev",
-    "github": "alexchen",
-    "githubUrl": "https://github.com/alexchen",
-    "linkedin": "alexchen-dev",
-    "linkedinUrl": "https://linkedin.com/in/alexchen-dev",
+    "instagram": "konit611",
+    "instagramUrl": "https://instagram.com/konit611",
+    "github": "konit611",
+    "githubUrl": "https://github.com/konit611",
+    "linkedin": "konit611",
+    "linkedinUrl": "https://linkedin.com/in/konit611",
     "about": "自己紹介",
     "aboutText": "こんにちは！\n\n私は日本の小さい町釧路に住んでいる開発者のKonit です。モバイルアプリ開発を専門とし、2年以上のソフトウェア開発経験があります。\n\n単純にコードを書くのではなく、実際のユーザの問題を解決することに興味があります。常に新しいテクノロジーを学び、その知識を共有したいと思っております。\n\nコーディングをしていない時は、新しいサービスの企画を考えるのが好きです。",
     "languages": "プログラミング言語",
@@ -105,5 +105,45 @@
     "defaultTitle": "技術ポートフォリオ - フルスタック開発者",
     "defaultDescription": "開発プロジェクト、技術記事、プロフェッショナルな歩みを探索してください。Web開発、モバイルアプリ、クラウド技術における革新的なソリューションを発見してください。",
     "keywords": "技術ポートフォリオ, フルスタック開発者, Web開発, ソフトウェアエンジニアリング, React, Node.js, プログラミング, テクノロジー"
+  },
+  "header": {
+    "brand": "KONIT"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "価値を創る制作者"
+    },
+    "value": {
+      "title": "問題から\n価値を",
+      "description": "単なる開発者ではなく、価値を創造するために努力します。"
+    }
+  },
+  "career": {
+    "title": "キャリア",
+    "subtitle": "ソフトウェア開発分野での専門的な歩みと経験をご紹介します",
+    "currentPosition": "現在のポジション",
+    "experience": "経験",
+    "skills": "技術スキル",
+    "education": "教育",
+    "certifications": "資格",
+    "achievements": "主な成果",
+    "workExperience": "業務経験",
+    "present": "現在",
+    "years": "年",
+    "downloadResume": "履歴書ダウンロード",
+    "contactMe": "お問い合わせ"
+  },
+  "portfolio": {
+    "title": "ポートフォリオ",
+    "subtitle": "私の最近の作品とプロジェクトを紹介します",
+    "viewProject": "プロジェクトを見る",
+    "viewCode": "コードを見る",
+    "viewDetails": "詳細を見る",
+    "technologies": "使用技術",
+    "workTogether": "一緒に仕事をしませんか？",
+    "workDescription": "新しいプロジェクトやコラボレーションの機会について話し合いましょう。",
+    "getInTouch": "お問い合わせ",
+    "noProjects": "ポートフォリオ項目がありません。",
+    "showingProjects": "{count} 個のプロジェクトを表示"
   }
 } 

@@ -1,5 +1,5 @@
 import { getAllPostMetadata, getAllCategories } from '../../../lib/markdown';
-import { getCategories } from '../../../lib/categories.server';
+import { getCategories, getParentCategories } from '../../../lib/categories.server';
 import BlogClient from './BlogClient';
 import { Metadata } from 'next';
 
@@ -37,16 +37,16 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   };
 
   const t = translations[locale as keyof typeof translations] || translations.en;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit.studio';
   const canonicalUrl = `${siteUrl}/${locale}/blog`;
 
   return {
     title: t.title,
     description: t.description,
     keywords: t.keywords,
-    authors: [{ name: 'Alex Chen' }],
-    creator: 'Alex Chen',
-    publisher: 'Tech Blog',
+    authors: [{ name: 'Konit' }],
+    creator: 'Konit',
+    publisher: 'KONIT Studio',
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: canonicalUrl,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       title: t.title,
       description: t.description,
       url: canonicalUrl,
-      siteName: 'Tech Blog',
+      siteName: 'KONIT Studio',
       locale: locale,
       type: 'website',
       images: [
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       card: 'summary_large_image',
       title: t.title,
       description: t.description,
-      creator: '@developer',
+      creator: '@konit611',
       images: [`${siteUrl}/images/og-blog.jpg`],
     },
     robots: {
@@ -90,6 +90,9 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
+    },
+    icons: {
+      icon: '/favicon.ico',
     },
   };
 }
@@ -109,6 +112,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
     const posts = getAllPostMetadata(locale);
     const categoryIds = getAllCategories();
     const categories = getCategories();
+    const parentCategories = getParentCategories();
 
     // Generate JSON-LD structured data for Blog
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
@@ -163,7 +167,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
         
         <BlogClient 
           posts={posts} 
-          categories={categories} 
+          categories={categories}
+          parentCategories={parentCategories}
           locale={locale}
         />
       </>

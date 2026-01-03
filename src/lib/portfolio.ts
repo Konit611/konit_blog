@@ -131,7 +131,8 @@ function parsePortfolioFile(filePath: string, slug: string): Portfolio {
     content,
     order: data.order || 0,
     featured: data.featured || false,
-    date: data.date || new Date().toISOString()
+    date: data.date || new Date().toISOString(),
+    relatedPosts: Array.isArray(data.relatedPosts) ? data.relatedPosts : []
   };
 }
 
@@ -240,4 +241,53 @@ export function getAllTechnologies(locale: string): string[] {
   });
   
   return Array.from(allTech).sort();
+}
+
+/**
+ * Get related blog posts for a portfolio project
+ * Returns PostMetadata array for the related posts
+ */
+export function getRelatedPosts(portfolioSlug: string, locale: string): Array<{
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  coverImage: string;
+  categories: string[];
+  readTime?: number;
+}> {
+  try {
+    const portfolio = getPortfolioBySlug(portfolioSlug, locale);
+    
+    if (!portfolio.relatedPosts || portfolio.relatedPosts.length === 0) {
+      return [];
+    }
+
+    // Import post functions dynamically to avoid circular dependency
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { getPostBySlug } = require('./markdown');
+    
+    const relatedPosts = portfolio.relatedPosts.map(postSlug => {
+      try {
+        const post = getPostBySlug(postSlug, locale);
+        return {
+          slug: post.slug,
+          title: post.title,
+          date: post.date,
+          excerpt: post.excerpt,
+          coverImage: post.coverImage,
+          categories: post.categories,
+          readTime: post.readTime
+        };
+      } catch (error) {
+        console.warn(`Related post not found: ${postSlug}`, error);
+        return null;
+      }
+    }).filter(post => post !== null);
+
+    return relatedPosts;
+  } catch (error) {
+    console.error(`Error getting related posts for ${portfolioSlug}:`, error);
+    return [];
+  }
 } 

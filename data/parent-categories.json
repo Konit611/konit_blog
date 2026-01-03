@@ -1,0 +1,57 @@
+[
+  {
+    "id": "planning",
+    "name": {
+      "ko": "기획",
+      "en": "Planning",
+      "ja": "企画",
+      "zh": "规划"
+    },
+    "description": {
+      "ko": "전략, 분석, 리서치",
+      "en": "Strategy, Analysis, Research",
+      "ja": "戦略、分析、リサーチ",
+      "zh": "战略、分析、研究"
+    },
+    "icon": "📋",
+    "color": "#3B82F6",
+    "order": 1
+  },
+  {
+    "id": "design",
+    "name": {
+      "ko": "디자인",
+      "en": "Design",
+      "ja": "デザイン",
+      "zh": "设计"
+    },
+    "description": {
+      "ko": "UI/UX, 그래픽, 3D",
+      "en": "UI/UX, Graphics, 3D",
+      "ja": "UI/UX、グラフィック、3D",
+      "zh": "UI/UX、图形、3D"
+    },
+    "icon": "🎨",
+    "color": "#EC4899",
+    "order": 2
+  },
+  {
+    "id": "development",
+    "name": {
+      "ko": "개발",
+      "en": "Development",
+      "ja": "開発",
+      "zh": "开发"
+    },
+    "description": {
+      "ko": "프로그래밍, 알고리즘, AI",
+      "en": "Programming, Algorithm, AI",
+      "ja": "プログラミング、アルゴリズム、AI",
+      "zh": "编程、算法、人工智能"
+    },
+    "icon": "💻",
+    "color": "#10B981",
+    "order": 3
+  }
+]
+
