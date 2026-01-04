@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 
 // Base site configuration
 export const siteConfig = {
-  name: 'Travel Blog',
-  description: 'A multilingual travel blog sharing adventures and experiences from around the world',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://travel-blog.com',
+  name: 'Konit Developer Blog',
+  description: 'A multilingual developer blog sharing programming insights, software development experiences, and technical knowledge',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com',
   ogImage: '/images/og-default.jpg',
-  author: 'Travel Blogger',
-  keywords: ['travel', 'blog', 'adventure', 'tourism', 'culture', 'photography'],
+  author: 'Konit Developer',
+  keywords: ['developer', 'blog', 'programming', 'software development', 'web development', 'technology', 'coding', 'tutorials', 'AI', 'algorithm', 'iOS', 'design'],
   supportedLocales: ['en', 'ko', 'zh', 'ja'],
 };
 
@@ -58,24 +58,24 @@ export function getLocalizedSiteMetadata(locale: string): {
 } {
   const localizedContent = {
     en: {
-      title: 'Travel Blog - Adventures Around the World',
-      description: 'Discover amazing travel destinations, cultural experiences, and adventure stories from around the globe. Join us on our journey!',
-      keywords: ['travel', 'blog', 'adventure', 'tourism', 'culture', 'photography', 'destinations'],
+      title: 'Developer Blog - Programming Insights & Tech Knowledge',
+      description: 'Explore software development tutorials, programming tips, AI insights, and technical experiences. Join us on our coding journey!',
+      keywords: ['developer', 'programming', 'coding', 'software development', 'web development', 'AI', 'algorithm', 'iOS', 'design', 'technology', 'tutorials'],
     },
     ko: {
-      title: '여행 블로그 - 세계 각지의 모험',
-      description: '전 세계의 놀라운 여행지, 문화적 경험, 모험 이야기를 발견하세요. 우리의 여행에 함께하세요!',
-      keywords: ['여행', '블로그', '모험', '관광', '문화', '사진', '여행지'],
+      title: '개발 블로그 - 프로그래밍 인사이트 & 기술 지식',
+      description: '소프트웨어 개발 튜토리얼, 프로그래밍 팁, AI 인사이트, 기술 경험을 탐험하세요. 우리의 코딩 여정에 함께하세요!',
+      keywords: ['개발자', '프로그래밍', '코딩', '소프트웨어 개발', '웹 개발', 'AI', '알고리즘', 'iOS', '디자인', '기술', '튜토리얼'],
     },
     zh: {
-      title: '旅行博客 - 世界各地的冒险',
-      description: '发现世界各地令人惊叹的旅行目的地、文化体验和冒险故事。加入我们的旅程！',
-      keywords: ['旅行', '博客', '冒险', '旅游', '文化', '摄影', '目的地'],
+      title: '开发博客 - 编程见解与技术知识',
+      description: '探索软件开发教程、编程技巧、AI见解和技术经验。加入我们的编程之旅！',
+      keywords: ['开发者', '编程', '代码', '软件开发', 'Web开发', 'AI', '算法', 'iOS', '设计', '技术', '教程'],
     },
     ja: {
-      title: 'トラベルブログ - 世界中の冒険',
-      description: '世界中の素晴らしい旅行先、文化的体験、冒険の物語を発見してください。私たちの旅に参加しましょう！',
-      keywords: ['旅行', 'ブログ', '冒険', '観光', '文化', '写真', '目的地'],
+      title: '開発ブログ - プログラミングの洞察と技術知識',
+      description: 'ソフトウェア開発チュートリアル、プログラミングのヒント、AIの洞察、技術的な経験を探求してください。私たちのコーディングの旅に参加しましょう！',
+      keywords: ['開発者', 'プログラミング', 'コーディング', 'ソフトウェア開発', 'Web開発', 'AI', 'アルゴリズム', 'iOS', 'デザイン', '技術', 'チュートリアル'],
     },
   };
 

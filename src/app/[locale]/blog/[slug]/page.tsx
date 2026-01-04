@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="w-10 h-10 rounded-full bg-gray-300" />
               <div className="flex-1">
                 <div className="font-semibold text-gray-900 text-sm">
-                  {post.author || 'Travel Blogger'}
+                  {post.author || 'Konit'}
                 </div>
                 <div className="text-gray-600 text-sm">
                   {authorRole}

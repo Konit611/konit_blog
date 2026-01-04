@@ -143,7 +143,7 @@ export function generateArticleStructuredData({
       : undefined,
     publisher: {
       '@type': 'Organization',
-      name: 'Travel Blog',
+      name: 'Konit Developer Blog',
       logo: {
         '@type': 'ImageObject',
         url: '/images/logo.png',
