@@ -10,8 +10,7 @@ import { PARENT_CATEGORY_IDS } from '@/constants/categories';
 
 const postsDirectory = path.join(process.cwd(), 'data/posts');
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const { visit } = require('unist-util-visit');
+import { visit } from 'unist-util-visit';
 
 interface ASTNode {
   type: string;
@@ -209,8 +208,7 @@ export function getAllPosts(locale: string): Post[] {
  */
 export function getPostMetadata(slug: string, locale: string): PostMetadata {
   const post = getPostBySlug(slug, locale);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { content, ...metadata } = post;
+  const { content: _, ...metadata } = post;
   return metadata;
 }
 

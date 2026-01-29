@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   };
 
   const t = translations[locale as keyof typeof translations] || translations.en;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit.studio';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
   const canonicalUrl = `${siteUrl}/${locale}/blog`;
 
   return {
@@ -115,22 +115,22 @@ export default async function BlogPage({ params }: BlogPageProps) {
     const parentCategories = getParentCategories();
 
     // Generate JSON-LD structured data for Blog
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Blog',
-      name: 'Tech Blog',
+      name: 'KONIT Studio',
       description: 'Browse our collection of development insights, coding tutorials, and technical articles. Find practical solutions for modern software development and discover the latest tech trends.',
       url: `${siteUrl}/${locale}/blog`,
       inLanguage: locale,
       author: {
         '@type': 'Person',
-        name: 'Alex Chen',
+        name: 'Konit',
         url: `${siteUrl}/${locale}/contact`
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Tech Blog',
+        name: 'KONIT Studio',
         logo: {
           '@type': 'ImageObject',
           url: `${siteUrl}/images/logo.png`
@@ -144,7 +144,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
         datePublished: post.date,
         author: {
           '@type': 'Person',
-          name: post.author || 'Alex Chen'
+          name: post.author || 'Konit'
         },
         image: post.coverImage ? `${siteUrl}${post.coverImage}` : `${siteUrl}/images/og-blog.jpg`,
         keywords: post.categories.concat(post.tags || [])

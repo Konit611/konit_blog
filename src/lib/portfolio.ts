@@ -8,8 +8,7 @@ import { Portfolio, PortfolioMetadata } from '../types';
 
 const portfolioDirectory = path.join(process.cwd(), 'data/portfolio');
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const { visit } = require('unist-util-visit');
+import { visit } from 'unist-util-visit';
 
 interface ASTNode {
   type: string;

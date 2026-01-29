@@ -8,7 +8,7 @@ export const SITE_CONFIG = {
   shortName: 'KONIT',
   author: 'Konit',
   email: 'konit611@gmail.com',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://konit.studio',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com',
   description: {
     en: 'Explore programming insights, coding tutorials, and technical deep-dives. Share knowledge about software development, web technologies, and daily learnings (TIL).',
     ko: '프로그래밍 인사이트, 코딩 튜토리얼, 기술 심화 내용을 탐험하세요. 소프트웨어 개발, 웹 기술, 일일 학습(TIL)에 대한 지식을 공유합니다.',

@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: CareerLayoutProps): Promise<M
   };
 
   const t = translations[locale as keyof typeof translations] || translations.en;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yoursite.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
   const canonicalUrl = `${siteUrl}/${locale}/career`;
 
   return {

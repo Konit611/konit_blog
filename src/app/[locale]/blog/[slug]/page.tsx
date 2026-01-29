@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   try {
     const { locale, slug } = await params;
     const post = getPostBySlug(slug, locale);
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
     const canonicalUrl = `${siteUrl}/${locale}/blog/${slug}`;
     
     return {
@@ -141,9 +141,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 }
 
-export async function generateStaticParams({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
   try {
-    const { locale } = await params;
+    const { locale } = params;
     const posts = getAllPosts(locale);
     return posts.map((post) => ({
       slug: post.slug,

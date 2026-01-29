@@ -20,7 +20,7 @@ export default function ContactClient({ locale }: ContactClientProps) {
   }
 
   // Generate JSON-LD structured data for Person
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit.studio';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',

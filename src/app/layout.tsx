@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from "next/font/local";
+import { headers } from 'next/headers';
 import './globals.css';
 import { siteConfig } from '@/lib/seo';
 
@@ -62,13 +63,20 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 };
 
-export default function RootLayout({
+const SUPPORTED_LOCALES = ['en', 'ko', 'zh', 'ja'];
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const pathname = headersList.get('x-next-url') || headersList.get('x-invoke-path') || '';
+  const segments = pathname.split('/').filter(Boolean);
+  const locale = SUPPORTED_LOCALES.includes(segments[0]) ? segments[0] : 'en';
+
   return (
-    <html lang="en">
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${notoSansJP.variable} ${notoSerifDisplay.variable} ${notoSansDisplay.variable}`}
       >

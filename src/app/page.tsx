@@ -1,26 +1,17 @@
-'use client';
+import { redirect } from 'next/navigation';
+import { headers } from 'next/headers';
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { detectLocale, storeLocale } from '@/lib/i18n-utils';
+const SUPPORTED_LOCALES = ['en', 'ko', 'zh', 'ja'];
+const DEFAULT_LOCALE = 'en';
 
-export default function RootPage() {
-  const router = useRouter();
+export default async function RootPage() {
+  const headersList = await headers();
+  const acceptLanguage = headersList.get('accept-language') || '';
+  const preferredLang = acceptLanguage
+    .split(',')
+    .map(lang => lang.split(';')[0].trim().split('-')[0].toLowerCase())
+    .find(lang => SUPPORTED_LOCALES.includes(lang));
 
-  useEffect(() => {
-    // Detect user's preferred language
-    const locale = detectLocale();
-    
-    // Store the detected locale
-    storeLocale(locale);
-    
-    // Redirect to the appropriate locale
-    router.replace(`/${locale}`);
-  }, [router]);
-
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-lg">Redirecting...</div>
-    </div>
-  );
-} 
+  const locale = preferredLang || DEFAULT_LOCALE;
+  redirect(`/${locale}`);
+}

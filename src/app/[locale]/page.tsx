@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   };
 
   const t = translations[locale as keyof typeof translations] || translations.en;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit.studio';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
 
   return {
     title: t.title,
@@ -118,22 +118,22 @@ export default async function HomePage({ params }: HomePageProps) {
     const featuredPosts = posts.slice(0, 3);
 
     // Generate JSON-LD structured data for WebSite
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techblog.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'Tech Blog',
+      name: 'KONIT Studio',
       description: 'Explore programming insights, coding tutorials, and technical deep-dives. Share knowledge about software development, web technologies, and daily learnings.',
       url: `${siteUrl}/${locale}`,
       inLanguage: locale,
       author: {
         '@type': 'Person',
-        name: 'Alex Chen',
+        name: 'Konit',
         url: `${siteUrl}/${locale}/contact`
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Tech Blog',
+        name: 'KONIT Studio',
         logo: {
           '@type': 'ImageObject',
           url: `${siteUrl}/images/logo.png`
@@ -149,7 +149,7 @@ export default async function HomePage({ params }: HomePageProps) {
       },
       mainEntity: {
         '@type': 'Blog',
-        name: 'Tech Blog',
+        name: 'KONIT Studio',
         description: 'Latest development insights and technical tutorials',
         url: `${siteUrl}/${locale}/blog`,
         blogPost: featuredPosts.slice(0, 3).map(post => ({
@@ -160,7 +160,7 @@ export default async function HomePage({ params }: HomePageProps) {
           datePublished: post.date,
           author: {
             '@type': 'Person',
-            name: post.author || 'Alex Chen'
+            name: post.author || 'Konit'
           },
           image: post.coverImage ? `${siteUrl}${post.coverImage}` : `${siteUrl}/images/og-blog.jpg`
         }))
@@ -183,11 +183,10 @@ export default async function HomePage({ params }: HomePageProps) {
     );
   } catch (error) {
     console.error('Error loading posts:', error);
-    const { locale } = await params;
     return (
-      <HomeClient 
-        featuredPosts={[]} 
-        locale={locale}
+      <HomeClient
+        featuredPosts={[]}
+        locale="en"
       />
     );
   }

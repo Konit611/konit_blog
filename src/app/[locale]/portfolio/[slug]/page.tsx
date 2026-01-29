@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PortfolioDetailPageProps): Pr
   try {
     const { locale, slug } = await params;
     const project = getPortfolioBySlug(slug, locale);
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yoursite.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://konit611.com';
     const canonicalUrl = `${siteUrl}/${locale}/portfolio/${slug}`;
     
     return {
@@ -159,9 +159,9 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPag
               {t.technologies}
             </h2>
             <div className="flex flex-wrap gap-2 md:gap-3">
-              {project.tech.map((tech: string, index: number) => (
+              {project.tech.map((tech: string) => (
                 <span
-                  key={index}
+                  key={tech}
                   className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-100 text-blue-800 text-sm font-medium rounded-lg"
                 >
                   {tech}
@@ -237,9 +237,9 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPag
   }
 }
 
-export async function generateStaticParams({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
   try {
-    const { locale } = await params;
+    const { locale } = params;
     const projects = getAllPortfolioMetadata(locale);
     return projects.map((project) => ({
       slug: project.slug,
